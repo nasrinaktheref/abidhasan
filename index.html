@@ -1,332 +1,236 @@
-```jsx
-import React from 'react';
-import { Globe, GraduationCap, Leaf, Users, BookOpen, Lightbulb, Rocket, Heart, Github } from 'lucide-react';
-
-const App = () => {
-  const organizations = [
-    {
-      name: "EduHarbor",
-      role: "Founder & Lead Organizer",
-      description: "Youth-focused educational platform organizing competitions, workshops, and campaigns",
-      icon: GraduationCap
-    },
-    {
-      name: "Unbounded Community",
-      role: "Chief Operating Officer (COO)",
-      description: "Bringing youth together for social welfare and community development",
-      icon: Users
-    },
-    {
-      name: "Muzora",
-      role: "Program Planner & COO",
-      description: "Next-generation organization fostering creativity, leadership, and innovation",
-      icon: Lightbulb
-    },
-    {
-      name: "AF Foundation",
-      role: "Humanitarian Coordinator",
-      description: "Supporting underprivileged and marginalized communities",
-      icon: Heart
-    },
-    {
-      name: "AF Fashion & Food",
-      role: "Social Responsibility Lead",
-      description: "Creative initiative promoting social responsibility among young entrepreneurs",
-      icon: Leaf
-    }
-  ];
-
-  const researchTopics = [
-    "Environmental Conservation & Climate Change Impact 🌎",
-    "Plastic Usage Awareness Among Students",
-    "Online Education: Benefits & Limitations 💻",
-    "Social Impact of Humanity & Youth Role",
-    "Youth Responsibility in Palestine Issue 🕊️"
-  ];
-
-  const projects = [
-    {
-      title: "🔬 SciVenture Olympiad 2025",
-      description: "Massive science competition engaging students nationwide in knowledge, science, and creativity"
-    },
-    {
-      title: "🧠 The Brain Battle 1.0",
-      description: "Intellectual competition sparking curiosity and learning enthusiasm among youth"
-    },
-    {
-      title: "📘 English Challenge 2025",
-      description: "Competition enhancing English proficiency and boosting confidence among young participants"
-    },
-    {
-      title: "🌿 Green Awareness Campaign",
-      description: "Environmental awareness campaign promoting sustainable lifestyles among youth"
-    },
-    {
-      title: "🕊️ Stand for Palestine Initiative",
-      description: "Humanitarian campaign standing with Palestinian children and innocent civilians"
-    }
-  ];
-
-  const futurePlans = [
-    "Establish an international humanitarian organization 🌐",
-    "Create a free online learning platform for youth 🎓",
-    "Drive positive social change through scientific research 🔬",
-    "Build support networks for children in Palestine and oppressed regions 🕊️"
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-50 to-cyan-50">
-      {/* Header */}
-      <header className="bg-gradient-to-r from-emerald-600 to-teal-700 text-white py-16 px-4">
-        <div className="max-w-6xl mx-auto text-center">
-          <div className="flex items-center justify-center mb-6">
-            <Globe className="w-12 h-12 mr-4" />
-            <h1 className="text-4xl md:text-6xl font-bold">আবীদ হাসান</h1>
-          </div>
-          <p className="text-xl md:text-2xl mb-8 font-light">মানবতার আলোর পথে এক তরুণ যাত্রা</p>
-          <div className="w-24 h-1 bg-white mx-auto rounded-full"></div>
-        </div>
-      </header>
-
-      {/* Hero Section with Image */}
-      <section className="py-16 px-4 bg-gray-900">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
-          <div className="md:w-1/2">
-            <img 
-              src="https://placehold.co/600x800/333333/FFFFFF?text=Abid+Hasan" 
-              alt="Abid Hasan" 
-              className="rounded-2xl shadow-2xl w-full max-w-md mx-auto md:mx-0"
-            />
-          </div>
-          <div className="md:w-1/2 text-white">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">আবীদ হাসান — মানবতার আলোর পথে এক তরুণ যাত্রা</h2>
-            <p className="text-lg mb-6">
-              যে পৃথিবীতে প্রতিযোগিতা আর স্বার্থপরতা ক্রমে বেড়ে চলেছে, সেখানে কিছু তরুণ আজও নিঃস্বার্থভাবে মানুষের জন্য কাজ করে যাচ্ছেন। তাদের একজন হলেন আবীদ হাসান — একজন তরুণ শিক্ষার্থী, মানবসেবক, গবেষক ও উদ্যমী সংগঠক।
-            </p>
-            <blockquote className="text-xl italic border-l-4 border-emerald-400 pl-4 py-2 mb-6">
-              "মানুষের প্রকৃত শক্তি তার জ্ঞানে নয়, বরং তার মানবতায়।"
-            </blockquote>
-            <div className="flex flex-wrap gap-4 mt-8 justify-center md:justify-start">
-              <a href="https://www.facebook.com/abidhasanef/" target="_blank" rel="noopener noreferrer" className="bg-emerald-600 hover:bg-emerald-700 px-6 py-3 rounded-full font-semibold transition-colors flex items-center">
-                <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>আবীদ হাসান — মানবতার আলোর পথে এক তরুণ যাত্রা</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        emerald: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            200: '#99f6e4',
+                            300: '#5eead4',
+                            400: '#2dd4bf',
+                            500: '#14b8a6',
+                            600: '#0d9488',
+                            700: '#0f766e',
+                            800: '#115e59',
+                            900: '#134e4a'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Noto Sans Bengali', sans-serif;
+        }
+        .bengali-text {
+            font-family: 'Noto Sans Bengali', sans-serif;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-emerald-50 to-cyan-50">
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-emerald-600 to-teal-700 text-white py-16 px-4">
+        <div class="max-w-6xl mx-auto text-center">
+            <div class="flex items-center justify-center mb-6">
+                <svg class="w-12 h-12 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                 </svg>
-                Facebook
-              </a>
-              <a href="https://instagram.com/abidhasanef" target="_blank" rel="noopener noreferrer" className="bg-emerald-600 hover:bg-emerald-700 px-6 py-3 rounded-full font-semibold transition-colors flex items-center">
-                <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
-                </svg>
-                Instagram
-              </a>
-              <a href="https://github.com/abidhasanef" target="_blank" rel="noopener noreferrer" className="bg-emerald-600 hover:bg-emerald-700 px-6 py-3 rounded-full font-semibold transition-colors flex items-center">
-                <Github className="w-5 h-5 mr-2" />
-                GitHub
-              </a>
+                <h1 class="text-4xl md:text-6xl font-bold bengali-text">আবীদ হাসান</h1>
             </div>
-          </div>
+            <p class="text-xl md:text-2xl mb-8 font-light bengali-text">মানবতার আলোর পথে এক তরুণ যাত্রা</p>
+            <div class="w-24 h-1 bg-white mx-auto rounded-full"></div>
         </div>
-      </section>
+    </header>
 
-      {/* About Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-emerald-800 flex items-center justify-center">
-            <Users className="w-8 h-8 mr-3" />
-            About Abid Hasan
-          </h2>
-          <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12">
-            <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-6">
-              যে পৃথিবীতে প্রতিযোগিতা আর স্বার্থপরতা ক্রমে বেড়ে চলেছে, সেখানে কিছু তরুণ আজও নিঃস্বার্থভাবে মানুষের জন্য কাজ করে যাচ্ছেন। তাদের একজন হলেন আবীদ হাসান — একজন তরুণ শিক্ষার্থী, মানবসেবক, গবেষক ও উদ্যমী সংগঠক।
-            </p>
-            <blockquote className="text-xl md:text-2xl italic text-emerald-700 border-l-4 border-emerald-500 pl-6 py-4 bg-emerald-50 rounded-r-lg">
-              "মানুষের প্রকৃত শক্তি তার জ্ঞানে নয়, বরং তার মানবতায়।"
-            </blockquote>
-          </div>
-        </div>
-      </section>
-
-      {/* Education & Vision */}
-      <section className="py-16 px-4 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12">
-            {/* Education */}
-            <div>
-              <h3 className="text-2xl md:text-3xl font-bold mb-6 text-emerald-800 flex items-center">
-                <GraduationCap className="w-8 h-8 mr-3" />
-                Education & Learning Journey
-              </h3>
-              <p className="text-gray-700 leading-relaxed mb-4">
-                আবীদ একজন মেধাবী শিক্ষার্থী, যার কাছে শিক্ষা মানে কেবল পরীক্ষার প্রস্তুতি নয় — বরং জ্ঞানকে জীবনে প্রয়োগ করা। তিনি শিখতে ভালোবাসেন, নতুন ধারণা নিয়ে কাজ করেন, এবং সবসময় সমাজে পরিবর্তন আনার চিন্তা করেন।
-              </p>
-              <p className="text-gray-700 leading-relaxed">
-                তাঁর শেখার প্রতি আগ্রহ ও গবেষণাপ্রবণতা তাঁকে ইতিমধ্যে ১৫টিরও বেশি গবেষণা রিপোর্ট তৈরি করতে অনুপ্রাণিত করেছে, যেখানে তিনি সমাজ, শিক্ষা ও পরিবেশ সংক্রান্ত নানা বিষয়ের উপর বিশ্লেষণ করেছেন।
-              </p>
+    <!-- Hero Section with Image -->
+    <section class="py-16 px-4 bg-gray-900">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2">
+                <img src="https://placehold.co/600x800/333333/FFFFFF?text=Abid+Hasan" alt="Abid Hasan" class="rounded-2xl shadow-2xl w-full max-w-md mx-auto md:mx-0">
             </div>
-
-            {/* Vision */}
-            <div>
-              <h3 className="text-2xl md:text-3xl font-bold mb-6 text-emerald-800 flex items-center">
-                <Leaf className="w-8 h-8 mr-3" />
-                Vision — মানবতার জন্য এক স্বপ্ন
-              </h3>
-              <blockquote className="text-xl italic text-emerald-700 mb-6 bg-emerald-50 p-6 rounded-lg">
-                "আমি এমন এক পৃথিবী দেখতে চাই, যেখানে জ্ঞানের আলো আর মানবতার উষ্ণতা একসাথে থাকবে।"
-              </blockquote>
-              <div className="space-y-3">
-                <p className="text-gray-700">• তরুণদের মধ্যে মানবতার মূল্যবোধ ছড়িয়ে দেওয়া 🌿</p>
-                <p className="text-gray-700">• অসহায় ও নির্যাতিত মানুষের পাশে বাস্তবভাবে দাঁড়ানো 🤝</p>
-                <p className="text-gray-700">• ফিলিস্তিনসহ নিপীড়িত জনগোষ্ঠীর প্রতি সচেতনতা বাড়ানো 🕊️</p>
-                <p className="text-gray-700">• সমাজে গবেষণাভিত্তিক পরিবর্তনের ধারা তৈরি করা 📚</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Organizations */}
-      <section className="py-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-emerald-800 flex items-center justify-center">
-            <Users className="w-8 h-8 mr-3" />
-            Works & Leadership
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {organizations.map((org, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
-                <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
-                  <org.icon className="w-6 h-6 text-emerald-600" />
+            <div class="md:w-1/2 text-white">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 bengali-text">আবীদ হাসান — মানবতার আলোর পথে এক তরুণ যাত্রা</h2>
+                <p class="text-lg mb-6 bengali-text">
+                    যে পৃথিবীতে প্রতিযোগিতা আর স্বার্থপরতা ক্রমে বেড়ে চলেছে, সেখানে কিছু তরুণ আজও নিঃস্বার্থভাবে মানুষের জন্য কাজ করে যাচ্ছেন। তাদের একজন হলেন আবীদ হাসান — একজন তরুণ শিক্ষার্থী, মানবসেবক, গবেষক ও উদ্যমী সংগঠক।
+                </p>
+                <blockquote class="text-xl italic border-l-4 border-emerald-400 pl-4 py-2 mb-6 bengali-text">
+                    "মানুষের প্রকৃত শক্তি তার জ্ঞানে নয়, বরং তার মানবতায়।"
+                </blockquote>
+                <div class="flex flex-wrap gap-4 mt-8 justify-center md:justify-start">
+                    <a href="https://www.facebook.com/abidhasanef/" target="_blank" rel="noopener noreferrer" class="bg-emerald-600 hover:bg-emerald-700 px-6 py-3 rounded-full font-semibold transition-colors flex items-center">
+                        <i class="fab fa-facebook-f mr-2"></i>
+                        Facebook
+                    </a>
+                    <a href="https://instagram.com/abidhasanef" target="_blank" rel="noopener noreferrer" class="bg-emerald-600 hover:bg-emerald-700 px-6 py-3 rounded-full font-semibold transition-colors flex items-center">
+                        <i class="fab fa-instagram mr-2"></i>
+                        Instagram
+                    </a>
+                    <a href="https://github.com/abidhasanef" target="_blank" rel="noopener noreferrer" class="bg-emerald-600 hover:bg-emerald-700 px-6 py-3 rounded-full font-semibold transition-colors flex items-center">
+                        <i class="fab fa-github mr-2"></i>
+                        GitHub
+                    </a>
                 </div>
-                <h3 className="text-xl font-bold text-emerald-800 mb-2">{org.name}</h3>
-                <p className="text-emerald-600 font-medium mb-3">{org.role}</p>
-                <p className="text-gray-700">{org.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Research & Projects */}
-      <section className="py-16 px-4 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12">
-            {/* Research */}
-            <div>
-              <h3 className="text-2xl md:text-3xl font-bold mb-6 text-emerald-800 flex items-center">
-                <BookOpen className="w-8 h-8 mr-3" />
-                Research & Reports
-              </h3>
-              <p className="text-gray-700 mb-4">
-                গবেষণা আবীদের অন্যতম প্রিয় ক্ষেত্র। তিনি এখন পর্যন্ত ১৫টিরও বেশি গবেষণা রিপোর্ট তৈরি করেছেন, যেগুলোর বিষয়বস্তু বৈচিত্র্যময়:
-              </p>
-              <ul className="space-y-2">
-                {researchTopics.map((topic, index) => (
-                  <li key={index} className="text-gray-700 flex items-start">
-                    <span className="w-2 h-2 bg-emerald-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                    {topic}
-                  </li>
-                ))}
-              </ul>
-              <p className="text-gray-700 mt-4 italic">
-                "জ্ঞানকে কাজে লাগিয়ে মানবতার জন্য বাস্তব সমাধান খোঁজা।"
-              </p>
             </div>
-
-            {/* Projects */}
-            <div>
-              <h3 className="text-2xl md:text-3xl font-bold mb-6 text-emerald-800 flex items-center">
-                <Rocket className="w-8 h-8 mr-3" />
-                Projects & Campaigns
-              </h3>
-              <div className="space-y-4">
-                {projects.map((project, index) => (
-                  <div key={index} className="bg-emerald-50 rounded-lg p-4 border-l-4 border-emerald-500">
-                    <h4 className="font-bold text-emerald-800 mb-2">{project.title}</h4>
-                    <p className="text-gray-700">{project.description}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
         </div>
-      </section>
+    </section>
 
-      {/* Philosophy & Future */}
-      <section className="py-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12">
-            {/* Philosophy */}
-            <div className="bg-white rounded-2xl shadow-lg p-8">
-              <h3 className="text-2xl md:text-3xl font-bold mb-6 text-emerald-800 flex items-center">
-                <Lightbulb className="w-8 h-8 mr-3" />
-                Inspiration & Philosophy
-              </h3>
-              <blockquote className="text-xl italic text-emerald-700 mb-6 bg-emerald-50 p-6 rounded-lg">
-                "মানুষকে ভালোবাসা মানেই নিজেকে বদলে ফেলা। সমাজকে বদলাতে চাইলে প্রথমে নিজেকে মানবিক হতে হবে।"
-              </blockquote>
-              <div className="text-center py-4">
-                <div className="text-2xl font-bold text-emerald-800">"Learn, Serve, Inspire."</div>
-                <p className="text-gray-700 mt-2">শিখো, সেবা করো, এবং অন্যদের অনুপ্রাণিত করো। 🌿</p>
-              </div>
+    <!-- About Section -->
+    <section class="py-16 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-emerald-800 flex items-center justify-center bengali-text">
+                <svg class="w-8 h-8 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                </svg>
+                About Abid Hasan
+            </h2>
+            <div class="bg-white rounded-2xl shadow-lg p-8 md:p-12">
+                <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-6 bengali-text">
+                    যে পৃথিবীতে প্রতিযোগিতা আর স্বার্থপরতা ক্রমে বেড়ে চলেছে, সেখানে কিছু তরুণ আজও নিঃস্বার্থভাবে মানুষের জন্য কাজ করে যাচ্ছেন। তাদের একজন হলেন আবীদ হাসান — একজন তরুণ শিক্ষার্থী, মানবসেবক, গবেষক ও উদ্যমী সংগঠক।
+                </p>
+                <blockquote class="text-xl md:text-2xl italic text-emerald-700 border-l-4 border-emerald-500 pl-6 py-4 bg-emerald-50 rounded-r-lg bengali-text">
+                    "মানুষের প্রকৃত শক্তি তার জ্ঞানে নয়, বরং তার মানবতায়।"
+                </blockquote>
             </div>
+        </div>
+    </section>
 
-            {/* Future Plans */}
-            <div className="bg-white rounded-2xl shadow-lg p-8">
-              <h3 className="text-2xl md:text-3xl font-bold mb-6 text-emerald-800 flex items-center">
-                <Rocket className="w-8 h-8 mr-3" />
-                Future Plans
-              </h3>
-              <p className="text-gray-700 mb-6">
-                ভবিষ্যতে আবীদ হাসানের লক্ষ্য আরও বিস্তৃত ও বৈশ্বিক। তিনি চান এমন এক সমাজ গড়ে তুলতে, যেখানে শিক্ষা, সহানুভূতি ও সহযোগিতা মিলেমিশে থাকবে।
-              </p>
-              <ul className="space-y-3">
-                {futurePlans.map((plan, index) => (
-                  <li key={index} className="text-gray-700 flex items-start">
-                    <span className="w-2 h-2 bg-emerald-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                    {plan}
-                  </li>
-                ))}
-              </ul>
+    <!-- Education & Vision -->
+    <section class="py-16 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Education -->
+                <div>
+                    <h3 class="text-2xl md:text-3xl font-bold mb-6 text-emerald-800 flex items-center bengali-text">
+                        <svg class="w-8 h-8 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                            <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"></path>
+                        </svg>
+                        Education & Learning Journey
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed mb-4 bengali-text">
+                        আবীদ একজন মেধাবী শিক্ষার্থী, যার কাছে শিক্ষা মানে কেবল পরীক্ষার প্রস্তুতি নয় — বরং জ্ঞানকে জীবনে প্রয়োগ করা। তিনি শিখতে ভালোবাসেন, নতুন ধারণা নিয়ে কাজ করেন, এবং সবসময় সমাজে পরিবর্তন আনার চিন্তা করেন।
+                    </p>
+                    <p class="text-gray-700 leading-relaxed bengali-text">
+                        তাঁর শেখার প্রতি আগ্রহ ও গবেষণাপ্রবণতা তাঁকে ইতিমধ্যে ১৫টিরও বেশি গবেষণা রিপোর্ট তৈরি করতে অনুপ্রাণিত করেছে, যেখানে তিনি সমাজ, শিক্ষা ও পরিবেশ সংক্রান্ত নানা বিষয়ের উপর বিশ্লেষণ করেছেন।
+                    </p>
+                </div>
+
+                <!-- Vision -->
+                <div>
+                    <h3 class="text-2xl md:text-3xl font-bold mb-6 text-emerald-800 flex items-center bengali-text">
+                        <svg class="w-8 h-8 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path>
+                        </svg>
+                        Vision — মানবতার জন্য এক স্বপ্ন
+                    </h3>
+                    <blockquote class="text-xl italic text-emerald-700 mb-6 bg-emerald-50 p-6 rounded-lg bengali-text">
+                        "আমি এমন এক পৃথিবী দেখতে চাই, যেখানে জ্ঞানের আলো আর মানবতার উষ্ণতা একসাথে থাকবে।"
+                    </blockquote>
+                    <div class="space-y-3">
+                        <p class="text-gray-700 bengali-text">• তরুণদের মধ্যে মানবতার মূল্যবোধ ছড়িয়ে দেওয়া 🌿</p>
+                        <p class="text-gray-700 bengali-text">• অসহায় ও নির্যাতিত মানুষের পাশে বাস্তবভাবে দাঁড়ানো 🤝</p>
+                        <p class="text-gray-700 bengali-text">• ফিলিস্তিনসহ নিপীড়িত জনগোষ্ঠীর প্রতি সচেতনতা বাড়ানো 🕊️</p>
+                        <p class="text-gray-700 bengali-text">• সমাজে গবেষণাভিত্তিক পরিবর্তনের ধারা তৈরি করা 📚</p>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </section>
+    </section>
 
-      {/* Conclusion */}
-      <section className="py-16 px-4 bg-gradient-to-r from-emerald-600 to-teal-700 text-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8">💚 Conclusion</h2>
-          <p className="text-xl mb-8 leading-relaxed">
-            আবীদ হাসান সেইসব তরুণদের একজন, যাদের স্বপ্ন কেবল নিজের জন্য নয় — সবার জন্য। তিনি জানেন, পরিবর্তন এক দিনে আসে না, কিন্তু প্রতিটি সৎ পদক্ষেপই পরিবর্তনের সূচনা করে।
-          </p>
-          <blockquote className="text-2xl italic mb-8">
-            "যদি আমরা সবাই একটু একটু করে মানবতার আলো জ্বালাই, তবে একদিন অন্ধকার নিজে থেকেই হারিয়ে যাবে।" 🌟
-          </blockquote>
-          <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-8">
-            <a href="https://www.facebook.com/abidhasanef/" target="_blank" rel="noopener noreferrer" className="bg-white text-emerald-700 px-6 py-3 rounded-full font-semibold hover:bg-emerald-50 transition-colors flex items-center">
-              <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-              </svg>
-              Facebook
-            </a>
-            <a href="https://instagram.com/abidhasanef" target="_blank" rel="noopener noreferrer" className="bg-white text-emerald-700 px-6 py-3 rounded-full font-semibold hover:bg-emerald-50 transition-colors flex items-center">
-              <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
-              </svg>
-              Instagram
-            </a>
-            <a href="https://github.com/abidhasanef" target="_blank" rel="noopener noreferrer" className="bg-white text-emerald-700 px-6 py-3 rounded-full font-semibold hover:bg-emerald-50 transition-colors flex items-center">
-              <Github className="w-5 h-5 mr-2" />
-              GitHub
-            </a>
-          </div>
-          <p className="text-emerald-100">Made with ❤️ for Gaza | © 2025 Abid Hasan</p>
-          <p className="text-emerald-100 mt-2 font-semibold">From the river to the sea, Palestine will be free</p>
+    <!-- Organizations -->
+    <section class="py-16 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-emerald-800 flex items-center justify-center bengali-text">
+                <svg class="w-8 h-8 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                </svg>
+                Works & Leadership
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- EduHarbor -->
+                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                            <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-emerald-800 mb-2 bengali-text">EduHarbor</h3>
+                    <p class="text-emerald-600 font-medium mb-3 bengali-text">Founder & Lead Organizer</p>
+                    <p class="text-gray-700 bengali-text">Youth-focused educational platform organizing competitions, workshops, and campaigns</p>
+                </div>
+
+                <!-- Unbounded Community -->
+                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-emerald-800 mb-2 bengali-text">Unbounded Community</h3>
+                    <p class="text-emerald-600 font-medium mb-3 bengali-text">Chief Operating Officer (COO)</p>
+                    <p class="text-gray-700 bengali-text">Bringing youth together for social welfare and community development</p>
+                </div>
+
+                <!-- Muzora -->
+                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-emerald-800 mb-2 bengali-text">Muzora</h3>
+                    <p class="text-emerald-600 font-medium mb-3 bengali-text">Program Planner & COO</p>
+                    <p class="text-gray-700 bengali-text">Next-generation organization fostering creativity, leadership, and innovation</p>
+                </div>
+
+                <!-- AF Foundation -->
+                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-emerald-800 mb-2 bengali-text">AF Foundation</h3>
+                    <p class="text-emerald-600 font-medium mb-3 bengali-text">Humanitarian Coordinator</p>
+                    <p class="text-gray-700 bengali-text">Supporting underprivileged and marginalized communities</p>
+                </div>
+
+                <!-- AF Fashion & Food -->
+                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-emerald-800 mb-2 bengali-text">AF Fashion & Food</h3>
+                    <p class="text-emerald-600 font-medium mb-3 bengali-text">Social Responsibility Lead</p>
+                    <p class="text-gray-700 bengali-text">Creative initiative promoting social responsibility among young entrepreneurs</p>
+                </div>
+            </div>
         </div>
-      </section>
-    </div>
-  );
-};
+    </section>
 
-export default App;
-```
+    <!-- Research & Projects -->
+    <section class="py-16 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Research -->
+                <div>
+                    <h3 class="text-2xl md:text-3xl font-bold mb-6 text-emerald-800 flex items-center bengali-text">
+                        <svg class="w-8 h-8 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                      
