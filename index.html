@@ -1,473 +1,1497 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HMTL>
+<html lang="bn">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>আবীদ হাসান মানবতার আলোর পথে এক তরুণ যাত্রা</title>
+    <title>আবীদ হাসান - মানবতার আলোর পথে এক তরুণ যাত্রা</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        emerald: {
-                            50: '#f0fdfa',
-                            100: '#ccfbf1',
-                            200: '#99f6e4',
-                            300: '#5eead4',
-                            400: '#2dd4bf',
-                            500: '#14b8a6',
-                            600: '#0d9488',
-                            700: '#0f766e',
-                            800: '#115e59',
-                            900: '#134e4a'
-                        }
-                    }
-                }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@300;400;600;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            box-sizing: border-box;
+            font-family: 'Noto Sans Bengali', 'Inter', sans-serif;
+            overflow-x: hidden;
+            position: relative;
+        }
+        
+        /* Live Animated Background */
+        .live-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(-45deg, #667eea, #764ba2, #f093fb, #4facfe, #00f2fe);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+        }
+        
+        .live-background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="stars" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="white" opacity="0.3"><animate attributeName="opacity" values="0.3;0.8;0.3" dur="3s" repeatCount="indefinite"/></circle><circle cx="80" cy="30" r="0.5" fill="white" opacity="0.4"><animate attributeName="opacity" values="0.4;0.9;0.4" dur="2s" repeatCount="indefinite"/></circle><circle cx="40" cy="70" r="0.8" fill="white" opacity="0.2"><animate attributeName="opacity" values="0.2;0.7;0.2" dur="4s" repeatCount="indefinite"/></circle><circle cx="90" cy="80" r="0.6" fill="white" opacity="0.5"><animate attributeName="opacity" values="0.5;1;0.5" dur="2.5s" repeatCount="indefinite"/></circle><circle cx="10" cy="90" r="0.4" fill="white" opacity="0.3"><animate attributeName="opacity" values="0.3;0.8;0.3" dur="3.5s" repeatCount="indefinite"/></circle></pattern></defs><rect width="100" height="100" fill="url(%23stars)"/></svg>');
+            animation: starMove 20s linear infinite;
+        }
+        
+        .floating-particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
+        
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 50%;
+            animation: floatUp 8s linear infinite;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        @keyframes starMove {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-100px); }
+        }
+        
+        @keyframes floatUp {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
             }
         }
-    </script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;600;700&display=swap');
-        body {
-            font-family: 'Noto Sans Bengali', sans-serif;
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            position: relative;
         }
-        .bengali-text {
-            font-family: 'Noto Sans Bengali', sans-serif;
+        
+        .gradient-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.15"/><circle cx="10" cy="60" r="0.5" fill="white" opacity="0.15"/><circle cx="90" cy="40" r="0.5" fill="white" opacity="0.15"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            pointer-events: none;
+        }
+        
+        .floating-shapes {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
+        
+        .floating-shapes::before,
+        .floating-shapes::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .floating-shapes::before {
+            width: 200px;
+            height: 200px;
+            top: 20%;
+            right: 10%;
+            animation-delay: -2s;
+        }
+        
+        .floating-shapes::after {
+            width: 150px;
+            height: 150px;
+            bottom: 20%;
+            left: 15%;
+            animation-delay: -4s;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+        
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card-hover::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .card-hover:hover::before {
+            left: 100%;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 100%);
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(255,255,255,0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(from 0deg, transparent, rgba(255,255,255,0.1), transparent);
+            animation: rotate 4s linear infinite;
+        }
+        
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 8px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+            border-radius: 4px;
+            animation: glow 2s ease-in-out infinite alternate;
+            box-shadow: 0 0 20px rgba(102, 126, 234, 0.5);
+        }
+        
+        .section-enhanced {
+            position: relative;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border-radius: 30px;
+            overflow: hidden;
+        }
+        
+        .section-enhanced::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb, #4facfe, #00f2fe);
+            background-size: 200% 100%;
+            animation: shimmer 3s linear infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+        
+        @keyframes glow {
+            from { box-shadow: 0 0 5px rgba(102, 126, 234, 0.5); }
+            to { box-shadow: 0 0 20px rgba(102, 126, 234, 0.8); }
+        }
+        
+        .fade-in {
+            animation: fadeInUp 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        
+        @keyframes fadeInUp {
+            from { 
+                opacity: 0; 
+                transform: translateY(40px) scale(0.95);
+            }
+            to { 
+                opacity: 1; 
+                transform: translateY(0) scale(1);
+            }
+        }
+        
+        .quote-mark {
+            font-size: 5rem;
+            line-height: 0;
+            background: linear-gradient(135deg, rgba(255,255,255,0.4), rgba(255,255,255,0.1));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .profile-image {
+            position: relative;
+            animation: profileFloat 3s ease-in-out infinite;
+        }
+        
+        .profile-image::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: linear-gradient(45deg, #667eea, #764ba2, #f093fb, #667eea);
+            border-radius: 50%;
+            z-index: -1;
+            animation: borderRotate 3s linear infinite;
+        }
+        
+        @keyframes profileFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        @keyframes borderRotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        
+        .text-gradient {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        
+        .scroll-reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .premium-shadow {
+            box-shadow: 
+                0 4px 6px rgba(0, 0, 0, 0.07),
+                0 10px 15px rgba(0, 0, 0, 0.1),
+                0 20px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-blur {
+            backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .icon-bounce:hover {
+            animation: bounce 0.6s ease-in-out;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 60%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            80% { transform: translateY(-5px); }
         }
     </style>
-
 </head>
-<body class="min-h-screen bg-gradient-to-br from-emerald-50 to-cyan-50">
-    <!-- Header -->
-    <header class="bg-gradient-to-r from-emerald-600 to-teal-700 text-white py-16 px-4">
-        <div class="max-w-6xl mx-auto text-center">
-            <div class="flex items-center justify-center mb-6">
-                <svg class="w-12 h-12 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                </svg>
-                <h1 class="text-4xl md:text-6xl font-bold bengali-text">আবীদ হাসান</h1>
+<body class="bg-gray-50">
+    <!-- Live Animated Background -->
+    <div class="live-background">
+        <div class="floating-particles" id="particles"></div>
+    </div>
+    <!-- Hero Section -->
+    <header class="gradient-bg text-white relative">
+        <div class="floating-shapes"></div>
+        <nav class="container mx-auto px-6 py-4 relative z-10 nav-blur">
+            <div class="flex justify-between items-center">
+                <h1 class="text-2xl font-bold text-gradient">আবীদ হাসান</h1>
+                <div class="flex gap-4">
+                    <a href="https://www.facebook.com/abidhasanef" target="_blank" rel="noopener noreferrer" class="icon-bounce hover:opacity-80 transition-all duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </a>
+                    <a href="https://instagram.com/abidhasanef" target="_blank" rel="noopener noreferrer" class="icon-bounce hover:opacity-80 transition-all duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                    <a href="https://www.threads.com/@abidhasanef" target="_blank" rel="noopener noreferrer" class="icon-bounce hover:opacity-80 transition-all duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.5 12.01c0-3.339.645-6.4 1.915-9.092C4.69 0.615 6.956-.207 9.817-.207c1.856 0 3.582.515 5.13 1.531 1.548 1.016 2.709 2.456 3.451 4.281.742 1.825 1.122 3.83 1.122 5.955 0 2.207-.4 4.299-1.122 6.063-.722 1.764-1.883 3.203-3.451 4.219C14.399 23.485 12.673 24 10.817 24h1.369zm.014-2.21c1.32 0 2.5-.363 3.504-1.08 1.004-.717 1.78-1.712 2.31-2.952.53-1.24.798-2.596.798-4.03 0-1.495-.268-2.85-.798-4.03-.53-1.18-1.306-2.115-2.31-2.832-1.004-.717-2.184-1.08-3.504-1.08-1.32 0-2.5.363-3.504 1.08-1.004.717-1.78 1.652-2.31 2.832-.53 1.18-.798 2.535-.798 4.03 0 1.434.268 2.79.798 4.03.53 1.24 1.306 2.235 2.31 2.952 1.004.717 2.184 1.08 3.504 1.08z"/></svg>
+                    </a>
+                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="icon-bounce hover:opacity-80 transition-all duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    </a>
+                </div>
             </div>
-            <p class="text-xl md:text-2xl mb-8 font-light bengali-text">মানবতার আলোর পথে এক তরুণ যাত্রা</p>
-            <div class="w-24 h-1 bg-white mx-auto rounded-full"></div>
+        </nav>
+        
+        <div class="container mx-auto px-6 py-20 text-center fade-in relative z-10">
+            <div class="mb-8 profile-image">
+                <img src="https://github.com/nasrinaktheref/abidhasan/raw/9b8586cccc9f304e9ea671b964640e1240704da4/canvas.png" 
+                     alt="আবীদ হাসান - Profile Picture" 
+                     class="w-48 h-48 rounded-full mx-auto premium-shadow border-4 border-white object-cover relative z-10"
+                     onerror="this.style.display='none'; console.log('Profile image failed to load');">
+            </div>
+            <h2 class="text-5xl font-bold mb-6">আবীদ হাসান</h2>
+            <p class="text-2xl mb-8 opacity-90">মানবতার আলোর পথে এক তরুণ যাত্রা</p>
+            <div class="max-w-3xl mx-auto mb-12">
+                <p class="text-lg leading-relaxed opacity-90">
+                    যে পৃথিবীতে প্রতিযোগিতা আর স্বার্থপরতা ক্রমে বেড়ে চলেছে, সেখানে কিছু তরুণ আজও নিঃস্বার্থভাবে মানুষের জন্য কাজ করে যাচ্ছেন। তাদের একজন হলেন আবীদ হাসান — একজন তরুণ শিক্ষার্থী, মানবসেবক, গবেষক ও উদ্যমী সংগঠক।
+                </p>
+            </div>
+            <div class="glass-effect rounded-3xl p-10 max-w-3xl mx-auto premium-shadow">
+                <p class="text-2xl italic font-light leading-relaxed">
+                    <span class="quote-mark">"</span>
+                    মানুষের প্রকৃত শক্তি তার জ্ঞানে নয়, বরং তার মানবতায়।
+                    <span class="quote-mark">"</span>
+                </p>
+                <div class="mt-6 flex justify-center">
+                    <div class="w-16 h-1 bg-gradient-to-r from-transparent via-white to-transparent opacity-50 rounded-full"></div>
+                </div>
+            </div>
         </div>
     </header>
 
-    <!-- Hero Section with Image -->
-    <section class="py-16 px-4 bg-gray-900">
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
-            <div class="md:w-1/2">
-                <img src="https://github.com/nasrinaktheref/abidhasan/blob/9b8586cccc9f304e9ea671b964640e1240704da4/canvas.png?raw=true" alt="Abid Hasan" class="rounded-2xl shadow-2xl w-full max-w-md mx-auto md:mx-0">
-            </div>
-            <div class="md:w-1/2 text-white">
-                <h2 class="text-3xl md:text-4xl font-bold mb-6 bengali-text">আবীদ হাসান মানবতার আলোর পথে এক তরুণ যাত্রা</h2>
-                <p class="text-lg mb-6 bengali-text">
-                    যে পৃথিবীতে প্রতিযোগিতা আর স্বার্থপরতা ক্রমে বেড়ে চলেছে, সেখানে কিছু তরুণ আজও নিঃস্বার্থভাবে মানুষের জন্য কাজ করে যাচ্ছেন। তাদের একজন হলেন আবীদ হাসান একজন তরুণ শিক্ষার্থী, মানবসেবক, গবেষক ও উদ্যমী সংগঠক।
-                </p>
-                <blockquote class="text-xl italic border-l-4 border-emerald-400 pl-4 py-2 mb-6 bengali-text">
-                    "মানুষের প্রকৃত শক্তি তার জ্ঞানে নয়, বরং তার মানবতায়।"
-                </blockquote>
-                <div class="flex flex-wrap gap-4 mt-8 justify-center md:justify-start">
-                    <a href="https://www.facebook.com/abidhasanef/" target="_blank" rel="noopener noreferrer" class="bg-emerald-600 hover:bg-emerald-700 px-6 py-3 rounded-full font-semibold transition-colors flex items-center">
-                        <i class="fab fa-facebook-f mr-2"></i>
-                        Facebook
-                    </a>
-                    <a href="https://instagram.com/abidhasanef" target="_blank" rel="noopener noreferrer" class="bg-emerald-600 hover:bg-emerald-700 px-6 py-3 rounded-full font-semibold transition-colors flex items-center">
-                        <i class="fab fa-instagram mr-2"></i>
-                        Instagram
-                    </a>
-                    <a href="" target="_blank" rel="noopener noreferrer" class="bg-emerald-600 hover:bg-emerald-700 px-6 py-3 rounded-full font-semibold transition-colors flex items-center">
-                        <i class="fab fa-github mr-2"></i>
-                        GitHub
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Stats Section -->
-    <section class="py-16 px-4 bg-white">
-        <div class="max-w-6xl mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                <div class="bg-emerald-50 rounded-2xl p-8 shadow-lg">
-                    <div class="text-4xl md:text-5xl font-bold text-emerald-700 mb-2">175+</div>
-                    <div class="text-lg font-semibold text-emerald-800 bengali-text">Projects & Initiatives</div>
-                    <p class="text-gray-600 mt-2 bengali-text">Educational, humanitarian, and social impact projects</p>
+    <section class="gradient-bg py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8 relative z-10">
+                <div class="stat-card rounded-3xl p-10 text-center text-white card-hover">
+                    <div class="text-6xl font-bold mb-4 text-gradient bg-gradient-to-br from-white to-blue-200 bg-clip-text text-transparent">175+</div>
+                    <div class="text-xl font-semibold mb-2">Projects & Initiatives</div>
+                    <div class="text-sm opacity-80 leading-relaxed">Educational, humanitarian, and social impact projects</div>
                 </div>
-                <div class="bg-emerald-50 rounded-2xl p-8 shadow-lg">
-                    <div class="text-4xl md:text-5xl font-bold text-emerald-700 mb-2">590+</div>
-                    <div class="text-lg font-semibold text-emerald-800 bengali-text">Social 🌟 Stars</div>
-                    <p class="text-gray-600 mt-2 bengali-text">Open source contributions and code repositories</p>
+                <div class="stat-card rounded-3xl p-10 text-center text-white card-hover">
+                    <div class="text-6xl font-bold mb-4 text-gradient bg-gradient-to-br from-white to-purple-200 bg-clip-text text-transparent">590+</div>
+                    <div class="text-xl font-semibold mb-2">Social 🌟 Stars</div>
+                    <div class="text-sm opacity-80 leading-relaxed">Open source contributions and code repositories</div>
                 </div>
-                <div class="bg-emerald-50 rounded-2xl p-8 shadow-lg">
-                    <div class="text-4xl md:text-5xl font-bold text-emerald-700 mb-2">560K+</div>
-                    <div class="text-lg font-semibold text-emerald-800 bengali-text">Social Media Followers</div>
-                    <p class="text-gray-600 mt-2 bengali-text">Community engagement across all platforms</p>
+                <div class="stat-card rounded-3xl p-10 text-center text-white card-hover">
+                    <div class="text-6xl font-bold mb-4 text-gradient bg-gradient-to-br from-white to-pink-200 bg-clip-text text-transparent">560K+</div>
+                    <div class="text-xl font-semibold mb-2">Social Media Followers</div>
+                    <div class="text-sm opacity-80 leading-relaxed">Community engagement across all platforms</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section class="py-16 px-4">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-emerald-800 flex items-center justify-center bengali-text" id="about">
-                <svg class="w-8 h-8 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                </svg>
-                About Abid Hasan
-            </h2>
-            <div class="bg-white rounded-2xl shadow-lg p-8 md:p-12">
-                <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-6 bengali-text">
-                    যে পৃথিবীতে প্রতিযোগিতা আর স্বার্থপরতা ক্রমে বেড়ে চলেছে, সেখানে কিছু তরুণ আজও নিঃস্বার্থভাবে মানুষের জন্য কাজ করে যাচ্ছেন। তাদের একজন হলেন আবীদ হাসান — একজন তরুণ শিক্ষার্থী, মানবসেবক, গবেষক ও উদ্যমী সংগঠক।
+    <section class="py-24 relative">
+        <div class="container mx-auto px-6">
+            <div class="max-w-5xl mx-auto section-enhanced p-12 relative z-10">
+                <div class="text-center mb-12">
+                    <h3 class="text-5xl font-bold text-gray-800 mb-8 section-title">About Abid Hasan</h3>
+                    <div class="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto rounded-full mb-8"></div>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-6">
+                        <p class="text-xl text-gray-700 leading-relaxed">
+                            যে পৃথিবীতে প্রতিযোগিতা আর স্বার্থপরতা ক্রমে বেড়ে চলেছে, সেখানে কিছু তরুণ আজও নিঃস্বার্থভাবে মানুষের জন্য কাজ করে যাচ্ছেন।
+                        </p>
+                        <p class="text-xl text-gray-700 leading-relaxed">
+                            তাদের একজন হলেন <span class="font-bold text-purple-600">আবীদ হাসান</span> — একজন তরুণ শিক্ষার্থী, মানবসেবক, গবেষক ও উদ্যমী সংগঠক।
+                        </p>
+                    </div>
+                    
+                    <div class="relative">
+                        <div class="bg-gradient-to-br from-purple-100 via-pink-50 to-indigo-100 rounded-3xl p-8 border-2 border-purple-200 shadow-2xl">
+                            <div class="text-center mb-6">
+                                <div class="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                                    <span class="text-4xl">💫</span>
+                                </div>
+                            </div>
+                            <blockquote class="text-2xl italic text-center text-gray-800 leading-relaxed">
+                                "মানুষের প্রকৃত শক্তি তার জ্ঞানে নয়, বরং তার মানবতায়।"
+                            </blockquote>
+                            <div class="mt-6 flex justify-center">
+                                <div class="w-16 h-1 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="py-24 relative">
+        <div class="container mx-auto px-6">
+            <div class="max-w-5xl mx-auto section-enhanced p-12 relative z-10">
+                <div class="text-center mb-12">
+                    <h3 class="text-5xl font-bold text-gray-800 mb-8 section-title">Education & Learning Journey</h3>
+                    <div class="w-24 h-1 bg-gradient-to-r from-blue-400 to-green-400 mx-auto rounded-full mb-8"></div>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8 mb-12">
+                    <div class="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl p-8 border-2 border-blue-200 shadow-xl card-hover">
+                        <div class="text-center mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto shadow-lg">
+                                <span class="text-3xl">📚</span>
+                            </div>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-4 text-center">জ্ঞানের প্রয়োগ</h4>
+                        <p class="text-gray-700 text-center leading-relaxed">শিক্ষা মানে কেবল পরীক্ষার প্রস্তুতি নয়, বরং জ্ঞানকে জীবনে প্রয়োগ করা</p>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-green-50 to-teal-100 rounded-2xl p-8 border-2 border-green-200 shadow-xl card-hover">
+                        <div class="text-center mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-teal-600 rounded-full flex items-center justify-center mx-auto shadow-lg">
+                                <span class="text-3xl">🔬</span>
+                            </div>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-4 text-center">গবেষণাপ্রবণতা</h4>
+                        <p class="text-gray-700 text-center leading-relaxed">১৫টিরও বেশি গবেষণা রিপোর্ট তৈরি করেছেন বিভিন্ন বিষয়ে</p>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-purple-50 to-pink-100 rounded-2xl p-8 border-2 border-purple-200 shadow-xl card-hover">
+                        <div class="text-center mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto shadow-lg">
+                                <span class="text-3xl">🌟</span>
+                            </div>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-4 text-center">সামাজিক পরিবর্তন</h4>
+                        <p class="text-gray-700 text-center leading-relaxed">সবসময় সমাজে ইতিবাচক পরিবর্তন আনার চিন্তা করেন</p>
+                    </div>
+                </div>
+                
+                <div class="bg-gradient-to-br from-indigo-100 via-purple-50 to-pink-100 rounded-3xl p-10 border-2 border-indigo-200 shadow-2xl">
+                    <div class="text-center mb-8">
+                        <div class="w-24 h-24 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl">
+                            <span class="text-5xl">🎓</span>
+                        </div>
+                        <h4 class="text-3xl font-bold text-gray-800 mb-6">মেধাবী শিক্ষার্থী</h4>
+                    </div>
+                    <p class="text-xl text-gray-700 leading-relaxed text-center mb-6">
+                        আবীদ একজন মেধাবী শিক্ষার্থী, যার কাছে শিক্ষা মানে কেবল পরীক্ষার প্রস্তুতি নয় বরং জ্ঞানকে জীবনে প্রয়োগ করা। তিনি শিখতে ভালোবাসেন, নতুন ধারণা নিয়ে কাজ করেন।
+                    </p>
+                    <div class="flex justify-center">
+                        <div class="w-20 h-1 bg-gradient-to-r from-indigo-400 to-purple-400 rounded-full"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Published Books Section -->
+    <section class="py-20 bg-gradient-to-br from-amber-50 to-orange-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-5xl mx-auto">
+                <h3 class="text-4xl font-bold text-gray-800 mb-8 text-center section-title">Published Books</h3>
+                <p class="text-lg text-gray-700 text-center mb-12 max-w-3xl mx-auto">
+                    আবীদ হাসানের লেখনী শুধু গবেষণা রিপোর্টেই সীমাবদ্ধ নয়। তিনি একজন প্রকাশিত লেখক হিসেবেও পরিচিত, যার বইগুলো পাঠকদের মনে গভীর প্রভাব ফেলেছে।
                 </p>
-                <blockquote class="text-xl md:text-2xl italic text-emerald-700 border-l-4 border-emerald-500 pl-6 py-4 bg-emerald-50 rounded-r-lg bengali-text">
-                    "মানুষের প্রকৃত শক্তি তার জ্ঞানে নয়, বরং তার মানবতায়।"
-                </blockquote>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education & Vision -->
-    <section class="py-16 px-4 bg-white">
-        <div class="max-w-6xl mx-auto">
-            <div class="grid md:grid-cols-2 gap-12">
-                <!-- Education -->
-                <div id="education">
-                    <h3 class="text-2xl md:text-3xl font-bold mb-6 text-emerald-800 flex items-center bengali-text">
-                        <svg class="w-8 h-8 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
-                            <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"></path>
-                        </svg>
-                        Education & Learning Journey
-                    </h3>
-                    <p class="text-gray-700 leading-relaxed mb-4 bengali-text">
-                        আবীদ একজন মেধাবী শিক্ষার্থী, যার কাছে শিক্ষা মানে কেবল পরীক্ষার প্রস্তুতি নয় বরং জ্ঞানকে জীবনে প্রয়োগ করা। তিনি শিখতে ভালোবাসেন, নতুন ধারণা নিয়ে কাজ করেন, এবং সবসময় সমাজে পরিবর্তন আনার চিন্তা করেন।
+                
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
+                    <!-- QUANTA: THE THIRD SPARK -->
+                    <div class="bg-white rounded-2xl shadow-xl p-8 card-hover border-t-4 border-blue-600">
+                        <div class="text-center mb-6">
+                            <div class="w-24 h-32 bg-gradient-to-br from-blue-600 to-purple-700 rounded-lg mx-auto mb-4 flex items-center justify-center shadow-lg">
+                                <div class="text-white text-2xl font-bold">📚</div>
+                            </div>
+                            <div class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-bold inline-block mb-2">Science Fiction</div>
+                        </div>
+                        <h4 class="text-2xl font-bold text-gray-800 mb-3 text-center">QUANTA: THE THIRD SPARK</h4>
+                        <p class="text-gray-600 text-center mb-4 italic">A Journey into Quantum Mysteries</p>
+                        <p class="text-gray-700 leading-relaxed mb-6">
+                            কোয়ান্টাম পদার্থবিজ্ঞানের রহস্যময় জগতে এক অভূতপূর্ব যাত্রা। বিজ্ঞান ও কল্পনার মিশেলে তৈরি এই বইটি পাঠকদের নিয়ে যায় এমন এক জগতে যেখানে বাস্তবতা ও সম্ভাবনার সীমানা মিলেমিশে একাকার।
+                        </p>
+                        <div class="flex items-center justify-center space-x-4 text-sm text-gray-600">
+                            <span class="flex items-center"><span class="text-yellow-500 mr-1">⭐</span> Science Fiction</span>
+                            <span class="flex items-center"><span class="text-blue-500 mr-1">🔬</span> Quantum Physics</span>
+                        </div>
+                    </div>
+                    
+                    <!-- ছায়ার খেলা -->
+                    <div class="bg-white rounded-2xl shadow-xl p-8 card-hover border-t-4 border-purple-600">
+                        <div class="text-center mb-6">
+                            <div class="w-24 h-32 bg-gradient-to-br from-purple-600 to-pink-700 rounded-lg mx-auto mb-4 flex items-center justify-center shadow-lg">
+                                <div class="text-white text-2xl font-bold">📖</div>
+                            </div>
+                            <div class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-bold inline-block mb-2">সাহিত্য</div>
+                        </div>
+                        <h4 class="text-2xl font-bold text-gray-800 mb-3 text-center">ছায়ার খেলা</h4>
+                        <p class="text-gray-600 text-center mb-4 italic">জীবনের আলো-আঁধারির গল্প</p>
+                        <p class="text-gray-700 leading-relaxed mb-6">
+                            মানুষের জীবনের আলো-আঁধারি, স্বপন-বাস্তবতার মিশেলে রচিত এক অনন্য সাহিত্যকর্ম। এই বইয়ে তুলে ধরা হয়েছে জীবনের নানা রঙ, যেখানে প্রতিটি গল্প পাঠকের হৃদয়ে গভীর রেখাপাত করে।
+                        </p>
+                        <div class="flex items-center justify-center space-x-4 text-sm text-gray-600">
+                            <span class="flex items-center"><span class="text-red-500 mr-1">❤️</span> মানবিক</span>
+                            <span class="flex items-center"><span class="text-green-500 mr-1">🌿</span> জীবনমুখী</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gradient-to-r from-indigo-600 to-purple-700 rounded-2xl p-8 text-white text-center">
+                    <div class="flex items-center justify-center mb-4">
+                        <span class="text-3xl mr-3">✍️</span>
+                        <h4 class="text-2xl font-bold">লেখকের বার্তা</h4>
+                    </div>
+                    <p class="text-lg leading-relaxed opacity-95 max-w-3xl mx-auto">
+                        "লেখা আমার কাছে শুধু শব্দের খেলা নয়, বরং মানুষের হৃদয়ে পৌঁছানোর একটি মাধ্যম। প্রতিটি বই লেখার সময় আমি চেষ্টা করি পাঠকদের মনে এমন কিছু রেখে যেতে, যা তাদের চিন্তাভাবনায় ইতিবাচক পরিবর্তন আনতে পারে।"
                     </p>
-                    <p class="text-gray-700 leading-relaxed bengali-text">
-                        তাঁর শেখার প্রতি আগ্রহ ও গবেষণাপ্রবণতা তাঁকে ইতিমধ্যে ১৫টিরও বেশি গবেষণা রিপোর্ট তৈরি করতে অনুপ্রাণিত করেছে, যেখানে তিনি সমাজ, শিক্ষা ও পরিবেশ সংক্রান্ত নানা বিষয়ের উপর বিশ্লেষণ করেছেন।
-                    </p>
-                </div>
-
-                <!-- Vision -->
-                <div>
-                    <h3 class="text-2xl md:text-3xl font-bold mb-6 text-emerald-800 flex items-center bengali-text">
-                        <svg class="w-8 h-8 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path>
-                        </svg>
-                        Vision মানবতার জন্য এক স্বপ্ন
-                    </h3>
-                    <blockquote class="text-xl italic text-emerald-700 mb-6 bg-emerald-50 p-6 rounded-lg bengali-text">
-                        "আমি এমন এক পৃথিবী দেখতে চাই, যেখানে জ্ঞানের আলো আর মানবতার উষ্ণতা একসাথে থাকবে।"
-                    </blockquote>
-                    <div class="space-y-3">
-                        <p class="text-gray-700 bengali-text">• তরুণদের মধ্যে মানবতার মূল্যবোধ ছড়িয়ে দেওয়া 🌿</p>
-                        <p class="text-gray-700 bengali-text">• অসহায় ও নির্যাতিত মানুষের পাশে বাস্তবভাবে দাঁড়ানো 🤝</p>
-                        <p class="text-gray-700 bengali-text">• ফিলিস্তিনসহ নিপীড়িত জনগোষ্ঠীর প্রতি সচেতনতা বাড়ানো 🕊️</p>
-                        <p class="text-gray-700 bengali-text">• সমাজে গবেষণাভিত্তিক পরিবর্তনের ধারা তৈরি করা 📚</p>
+                    <div class="mt-6 flex justify-center">
+                        <div class="w-20 h-1 bg-white bg-opacity-50 rounded-full"></div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Organizations -->
-    <section class="py-16 px-4" id="organizations">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-emerald-800 flex items-center justify-center bengali-text">
-                <svg class="w-8 h-8 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                </svg>
-                Works & Leadership
-            </h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- EduHarbor -->
-                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
-                    <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
-                            <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-emerald-800 mb-2 bengali-text">EduHarbor</h3>
-                    <p class="text-emerald-600 font-medium mb-3 bengali-text">Managing Director & Lead Organizer</p>
-                    <p class="text-gray-700 bengali-text">Youth-focused educational platform organizing competitions, workshops, and campaigns</p>
-                </div>
-
-                <!-- Unbounded Community -->
-                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
-                    <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-emerald-800 mb-2 bengali-text">Unbounded Community</h3>
-                    <p class="text-emerald-600 font-medium mb-3 bengali-text">Chief Operating Officer (COO)</p>
-                    <p class="text-gray-700 bengali-text">Bringing youth together for social welfare and community development</p>
-                </div>
-
-                <!-- Muzora -->
-                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
-                    <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-emerald-800 mb-2 bengali-text">Muzora</h3>
-                    <p class="text-emerald-600 font-medium mb-3 bengali-text">Program Planner & COO</p>
-                    <p class="text-gray-700 bengali-text">Next-generation organization fostering creativity, leadership, and innovation</p>
-                </div>
-
-                <!-- AF Foundation -->
-                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
-                    <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-emerald-800 mb-2 bengali-text">AF Foundation</h3>
-                    <p class="text-emerald-600 font-medium mb-3 bengali-text">Humanitarian Coordinator</p>
-                    <p class="text-gray-700 bengali-text">Supporting underprivileged and marginalized communities</p>
-                </div>
-
-                <!-- AF Fashion & Food -->
-                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
-                    <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-emerald-800 mb-2 bengali-text">AF Fashion & Food</h3>
-                    <p class="text-emerald-600 font-medium mb-3 bengali-text">Social Responsibility Lead</p>
-                    <p class="text-gray-700 bengali-text">Creative initiative promoting social responsibility among young entrepreneurs</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Research & Projects -->
-    <section class="py-16 px-4 bg-white" id="projects">
-        <div class="max-w-6xl mx-auto">
-            <div class="grid md:grid-cols-2 gap-12">
-                <!-- Research -->
-                <div>
-                    <h3 class="text-2xl md:text-3xl font-bold mb-6 text-emerald-800 flex items-center bengali-text">
-                        <svg class="w-8 h-8 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-                        </svg>
-                        Research & Reports
-                    </h3>
-                    <p class="text-gray-700 mb-4 bengali-text">
-                        গবেষণা আবীদের অন্যতম প্রিয় ক্ষেত্র। তিনি এখন পর্যন্ত ১৫টিরও বেশি গবেষণা রিপোর্ট তৈরি করেছেন, যেগুলোর বিষয়বস্তু বৈচিত্র্যময়:
+    <!-- Science Writer Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <h3 class="text-4xl font-bold text-gray-800 mb-8 section-title">Science Writer & Author</h3>
+                <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 mb-8 border-2 border-blue-200">
+                    <div class="flex items-center mb-6">
+                        <div class="text-4xl mr-4">📚</div>
+                        <div>
+                            <h4 class="text-2xl font-bold text-gray-800 mb-2">তরুণ বিজ্ঞানমনস্ক লেখক</h4>
+                            <p class="text-lg text-blue-700 font-semibold italic">"জ্ঞানই মানুষের সত্যিকারের শক্তি।"</p>
+                        </div>
+                    </div>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        আবিদ হাসান একজন তরুণ বিজ্ঞানমনস্ক লেখক, যিনি বিশ্বাস করেন—"জ্ঞানই মানুষের সত্যিকারের শক্তি।" ছোটবেলা থেকেই বিজ্ঞান সম্পর্কে তাঁর গভীর কৌতূহল এবং জানার আগ্রহ তাঁকে নতুন নতুন প্রশ্নের অনুসন্ধানে অনুপ্রাণিত করেছে।
                     </p>
-                    <ul class="space-y-2">
-                        <li class="text-gray-700 flex items-start bengali-text">
-                            <span class="w-2 h-2 bg-emerald-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                            Environmental Conservation & Climate Change Impact 🌎
-                        </li>
-                        <li class="text-gray-700 flex items-start bengali-text">
-                            <span class="w-2 h-2 bg-emerald-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                            Plastic Usage Awareness Among Students
-                        </li>
-                        <li class="text-gray-700 flex items-start bengali-text">
-                            <span class="w-2 h-2 bg-emerald-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                            Online Education: Benefits & Limitations 💻
-                        </li>
-                        <li class="text-gray-700 flex items-start bengali-text">
-                            <span class="w-2 h-2 bg-emerald-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                            Social Impact of Humanity & Youth Role
-                        </li>
-                        <li class="text-gray-700 flex items-start bengali-text">
-                            <span class="w-2 h-2 bg-emerald-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                            Youth Responsibility in Palestine Issue 🕊️
-                        </li>
-                    </ul>
-                    <p class="text-gray-700 mt-4 italic bengali-text">
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-6 mb-8">
+                    <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 border-2 border-purple-200">
+                        <div class="text-3xl mb-4">🔬</div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-3">বিজ্ঞানের সহজীকরণ</h4>
+                        <p class="text-gray-700 leading-relaxed">
+                            তিনি বিজ্ঞানের জটিল বিষয়গুলোকে সহজ ভাষায় উপস্থাপন করতে ভালোবাসেন, যেন পাঠকরা বিজ্ঞানকে কেবল পাঠ্যবইয়ের অধ্যায় নয়, বরং জীবনের অংশ হিসেবে অনুভব করতে পারেন।
+                        </p>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-green-50 to-teal-50 rounded-xl p-6 border-2 border-green-200">
+                        <div class="text-3xl mb-4">🎓</div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-3">শিক্ষামূলক কার্যক্রম</h4>
+                        <p class="text-gray-700 leading-relaxed">
+                            শিক্ষার পাশাপাশি তিনি যুক্ত আছেন বিভিন্ন শিক্ষামূলক ও সৃজনশীল কার্যক্রমের সঙ্গে, যার মাধ্যমে তরুণদের মধ্যে বিজ্ঞানচর্চার আগ্রহ বৃদ্ধি করতে কাজ করছেন।
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="bg-gradient-to-r from-indigo-500 to-purple-600 rounded-2xl p-8 text-white">
+                    <div class="flex items-center mb-4">
+                        <div class="text-3xl mr-4">📖</div>
+                        <h4 class="text-2xl font-bold">লেখকের দর্শন</h4>
+                    </div>
+                    <p class="text-lg leading-relaxed opacity-95">
+                        এই বইয়ে তিনি তুলে ধরেছেন বিজ্ঞানের নানা গুরুত্বপূর্ণ প্রশ্ন ও ধারণা, যা শুধু পরীক্ষার জন্য নয়, চিন্তাশক্তি ও কৌতূহল জাগানোর জন্যও অত্যন্ত মূল্যবান।
+                    </p>
+                    <div class="mt-6 flex justify-center">
+                        <div class="w-20 h-1 bg-white bg-opacity-50 rounded-full"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section class="py-24 bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white relative overflow-hidden">
+        <!-- Animated Background -->
+        <div class="absolute inset-0">
+            <div class="absolute inset-0 bg-gradient-to-br from-emerald-600/20 via-teal-600/20 to-cyan-600/20"></div>
+            <div class="absolute top-0 left-0 w-full h-full">
+                <div class="absolute top-16 right-16 w-40 h-40 bg-emerald-400/10 rounded-full blur-2xl animate-pulse"></div>
+                <div class="absolute bottom-20 left-20 w-32 h-32 bg-teal-400/10 rounded-full blur-2xl animate-pulse" style="animation-delay: 2s;"></div>
+                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-cyan-400/5 rounded-full blur-3xl animate-pulse" style="animation-delay: 4s;"></div>
+            </div>
+        </div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-6xl mx-auto">
+                <!-- Header Section -->
+                <div class="text-center mb-16">
+                    <div class="relative inline-block mb-8">
+                        <div class="absolute inset-0 bg-gradient-to-r from-emerald-400 to-cyan-400 rounded-full blur-xl opacity-40 animate-pulse"></div>
+                        <div class="relative w-32 h-32 bg-gradient-to-br from-emerald-500 to-cyan-600 rounded-full flex items-center justify-center backdrop-blur-lg border-4 border-white/20 shadow-2xl">
+                            <span class="text-6xl animate-bounce">🌟</span>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-6xl font-bold mb-8 bg-gradient-to-r from-emerald-200 via-teal-200 to-cyan-200 bg-clip-text text-transparent">
+                        Vision
+                    </h3>
+                    <div class="text-3xl font-bold mb-8 text-emerald-300">মানবতার জন্য এক স্বপ্ন</div>
+                    
+                    <div class="max-w-4xl mx-auto mb-12">
+                        <div class="bg-gradient-to-r from-white/15 to-white/5 backdrop-blur-xl rounded-3xl p-10 border border-white/20 shadow-2xl">
+                            <div class="text-4xl mb-6">💫</div>
+                            <p class="text-2xl italic leading-relaxed text-emerald-100">
+                                "আমি এমন এক পৃথিবী দেখতে চাই, যেখানে জ্ঞানের আলো আর মানবতার উষ্ণতা একসাথে থাকবে।"
+                            </p>
+                            <div class="mt-6 flex justify-center">
+                                <div class="w-24 h-1 bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 rounded-full animate-pulse"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Vision Cards Grid -->
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="group relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-emerald-500/30 to-green-600/30 rounded-2xl blur opacity-50 group-hover:opacity-70 transition-opacity duration-300"></div>
+                        <div class="relative bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-xl rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105 shadow-xl">
+                            <div class="flex items-center mb-6">
+                                <div class="w-16 h-16 bg-gradient-to-br from-emerald-400 to-green-500 rounded-full flex items-center justify-center mr-4 shadow-lg animate-bounce">
+                                    <span class="text-3xl">🌿</span>
+                                </div>
+                                <div class="flex-1">
+                                    <h4 class="text-xl font-bold text-emerald-200 mb-2">মানবিক মূল্যবোধ</h4>
+                                    <div class="w-12 h-1 bg-emerald-400 rounded-full"></div>
+                                </div>
+                            </div>
+                            <p class="text-lg text-white/90 leading-relaxed">তরুণদের মধ্যে মানবতার মূল্যবোধ ছড়িয়ে দেওয়া এবং একটি সহানুভূতিশীল সমাজ গড়ে তোলা</p>
+                        </div>
+                    </div>
+                    
+                    <div class="group relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-teal-500/30 to-blue-600/30 rounded-2xl blur opacity-50 group-hover:opacity-70 transition-opacity duration-300"></div>
+                        <div class="relative bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-xl rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105 shadow-xl">
+                            <div class="flex items-center mb-6">
+                                <div class="w-16 h-16 bg-gradient-to-br from-teal-400 to-blue-500 rounded-full flex items-center justify-center mr-4 shadow-lg animate-bounce" style="animation-delay: 0.5s;">
+                                    <span class="text-3xl">🤝</span>
+                                </div>
+                                <div class="flex-1">
+                                    <h4 class="text-xl font-bold text-teal-200 mb-2">মানবসেবা</h4>
+                                    <div class="w-12 h-1 bg-teal-400 rounded-full"></div>
+                                </div>
+                            </div>
+                            <p class="text-lg text-white/90 leading-relaxed">অসহায় ও নির্যাতিত মানুষের পাশে বাস্তবভাবে দাঁড়ানো এবং তাদের জীবনে ইতিবাচক পরিবর্তন আনা</p>
+                        </div>
+                    </div>
+                    
+                    <div class="group relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/30 to-indigo-600/30 rounded-2xl blur opacity-50 group-hover:opacity-70 transition-opacity duration-300"></div>
+                        <div class="relative bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-xl rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105 shadow-xl">
+                            <div class="flex items-center mb-6">
+                                <div class="w-16 h-16 bg-gradient-to-br from-cyan-400 to-indigo-500 rounded-full flex items-center justify-center mr-4 shadow-lg animate-bounce" style="animation-delay: 1s;">
+                                    <span class="text-3xl">🕊️</span>
+                                </div>
+                                <div class="flex-1">
+                                    <h4 class="text-xl font-bold text-cyan-200 mb-2">ন্যায়বিচার</h4>
+                                    <div class="w-12 h-1 bg-cyan-400 rounded-full"></div>
+                                </div>
+                            </div>
+                            <p class="text-lg text-white/90 leading-relaxed">ফিলিস্তিনসহ নিপীড়িত জনগোষ্ঠীর প্রতি সচেতনতা বাড়ানো এবং ন্যায়বিচারের পক্ষে দাঁড়ানো</p>
+                        </div>
+                    </div>
+                    
+                    <div class="group relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-purple-500/30 to-pink-600/30 rounded-2xl blur opacity-50 group-hover:opacity-70 transition-opacity duration-300"></div>
+                        <div class="relative bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-xl rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105 shadow-xl">
+                            <div class="flex items-center mb-6">
+                                <div class="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center mr-4 shadow-lg animate-bounce" style="animation-delay: 1.5s;">
+                                    <span class="text-3xl">📚</span>
+                                </div>
+                                <div class="flex-1">
+                                    <h4 class="text-xl font-bold text-purple-200 mb-2">গবেষণা ও উন্নয়ন</h4>
+                                    <div class="w-12 h-1 bg-purple-400 rounded-full"></div>
+                                </div>
+                            </div>
+                            <p class="text-lg text-white/90 leading-relaxed">সমাজে গবেষণাভিত্তিক পরিবর্তনের ধারা তৈরি করা এবং বৈজ্ঞানিক চিন্তাভাবনা প্রসার করা</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Call to Action -->
+                <div class="mt-16 text-center">
+                    <div class="max-w-3xl mx-auto">
+                        <div class="bg-gradient-to-r from-white/20 to-white/10 backdrop-blur-xl rounded-3xl p-10 border border-white/30 shadow-2xl">
+                            <div class="text-5xl mb-6 animate-pulse">🌍</div>
+                            <h4 class="text-3xl font-bold mb-6 text-emerald-200">একসাথে গড়ি সুন্দর ভবিষ্যৎ</h4>
+                            <p class="text-xl text-white/90 leading-relaxed mb-6">
+                                এই স্বপ্ন বাস্তবায়নে আমার একার পক্ষে সম্ভব নয়। প্রয়োজন আপনাদের সবার সহযোগিতা, দোয়া এবং অংশগ্রহণ।
+                            </p>
+                            <a href="https://ai.eduharbor.top/abidai/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-full text-white font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
+                                <span class="mr-2">🤝</span>
+                                আমাদের সাথে যুক্ত হন
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Achievement Section -->
+    <section class="py-24 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white relative overflow-hidden">
+        <!-- Animated Background -->
+        <div class="absolute inset-0">
+            <div class="absolute inset-0 bg-gradient-to-br from-blue-600/30 via-purple-600/30 to-pink-600/30"></div>
+            <div class="absolute top-0 left-0 w-full h-full">
+                <div class="absolute top-20 left-10 w-32 h-32 bg-blue-400/20 rounded-full blur-xl animate-pulse"></div>
+                <div class="absolute top-40 right-20 w-24 h-24 bg-purple-400/20 rounded-full blur-xl animate-pulse" style="animation-delay: 1s;"></div>
+                <div class="absolute bottom-32 left-1/4 w-40 h-40 bg-pink-400/20 rounded-full blur-xl animate-pulse" style="animation-delay: 2s;"></div>
+                <div class="absolute bottom-20 right-1/3 w-28 h-28 bg-indigo-400/20 rounded-full blur-xl animate-pulse" style="animation-delay: 3s;"></div>
+            </div>
+        </div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-6xl mx-auto">
+                <!-- Header Section -->
+                <div class="text-center mb-16">
+                    <div class="relative inline-block mb-8">
+                        <div class="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full blur-lg opacity-50 animate-pulse"></div>
+                        <div class="relative w-32 h-32 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center backdrop-blur-lg border-4 border-white/20 shadow-2xl">
+                            <span class="text-6xl animate-bounce">🤖</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <h3 class="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-200 via-purple-200 to-pink-200 bg-clip-text text-transparent">
+                            Latest Achievement
+                        </h3>
+                        <div class="text-4xl font-bold mb-4 text-yellow-300 animate-pulse">✨ Abid's AI ✨</div>
+                    </div>
+                    
+                    <div class="max-w-4xl mx-auto">
+                        <div class="bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-xl rounded-3xl p-10 border border-white/20 shadow-2xl">
+                            <div class="text-2xl leading-relaxed mb-8 text-blue-100">
+                                দীর্ঘ প্রায় <span class="text-yellow-300 font-bold">দুই বছরের</span> অক্লান্ত পরিশ্রম, নিরলস চেষ্টা, এবং আল্লাহর অশেষ রহমতে, আজ আমি আনন্দের সঙ্গে জানাচ্ছি —
+                            </div>
+                            <div class="text-3xl font-bold text-center bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent mb-6">
+                                💡 AH AI এর বিশেষ প্রজেক্ট "Abid's AI" অবশেষে আত্মপ্রকাশের পথে! 🚀
+                            </div>
+                            <div class="flex justify-center">
+                                <div class="w-24 h-1 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 rounded-full animate-pulse"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Features Grid -->
+                <div class="grid md:grid-cols-3 gap-8 mb-16">
+                    <div class="group relative">
+                        <div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl blur opacity-25 group-hover:opacity-40 transition-opacity duration-300"></div>
+                        <div class="relative bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105">
+                            <div class="text-5xl mb-6 text-center animate-bounce">🤖</div>
+                            <h4 class="text-2xl font-bold mb-4 text-center text-blue-200">Abid's AI কী?</h4>
+                            <p class="text-white/80 leading-relaxed text-center">একটি অত্যাধুনিক কৃত্রিম বুদ্ধিমত্তা টুল, যা মানুষের কাজকে আরও সহজ, দ্রুত এবং বুদ্ধিদীপ্ত করতে তৈরি।</p>
+                        </div>
+                    </div>
+                    
+                    <div class="group relative">
+                        <div class="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl blur opacity-25 group-hover:opacity-40 transition-opacity duration-300"></div>
+                        <div class="relative bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105">
+                            <div class="text-5xl mb-6 text-center animate-bounce" style="animation-delay: 0.5s;">🔧</div>
+                            <h4 class="text-2xl font-bold mb-4 text-center text-purple-200">৩২০টি অনন্য টুল</h4>
+                            <p class="text-white/80 leading-relaxed text-center">AH AI-এর বিশাল নেটওয়ার্কের অংশ, যেখানে ৩টি টুল সরাসরি আমার তৈরি করা।</p>
+                        </div>
+                    </div>
+                    
+                    <div class="group relative">
+                        <div class="absolute inset-0 bg-gradient-to-r from-pink-500 to-orange-500 rounded-2xl blur opacity-25 group-hover:opacity-40 transition-opacity duration-300"></div>
+                        <div class="relative bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105">
+                            <div class="text-5xl mb-6 text-center animate-bounce" style="animation-delay: 1s;">📊</div>
+                            <h4 class="text-2xl font-bold mb-4 text-center text-pink-200">১৮,০০০+ ব্যবহারকারী</h4>
+                            <p class="text-white/80 leading-relaxed text-center">বর্তমানে Abid's AI-এর ব্যবহারকারী সংখ্যা ইতিমধ্যে ১৮,০০০+ ছাড়িয়ে গেছে!</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Info Cards -->
+                <div class="grid md:grid-cols-2 gap-8 mb-16">
+                    <div class="bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-xl rounded-2xl p-8 border border-white/20 shadow-xl">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-green-400 to-blue-500 rounded-full flex items-center justify-center mr-4 shadow-lg">
+                                <span class="text-3xl">🌍</span>
+                            </div>
+                            <h4 class="text-2xl font-bold text-green-200">কারা এই সেবা পাবেন?</h4>
+                        </div>
+                        <p class="text-white/90 leading-relaxed text-lg">
+                            এই সেবা শুধুমাত্র Muzora কর্তৃক রেজিস্ট্রেশন করা প্রতিষ্ঠান এবং অনুমোদিত দেশগুলোতে উপলব্ধ থাকবে।
+                        </p>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-xl rounded-2xl p-8 border border-white/20 shadow-xl">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-red-400 to-green-500 rounded-full flex items-center justify-center mr-4 shadow-lg">
+                                <span class="text-3xl">🇧🇩</span>
+                            </div>
+                            <h4 class="text-2xl font-bold text-red-200">বাংলাদেশে কী অবস্থা?</h4>
+                        </div>
+                        <p class="text-white/90 leading-relaxed text-lg">
+                            বাংলাদেশে Muzora-এর কার্যক্রম স্থগিত থাকায় পূর্ণ সেবা সম্ভব নয়। তবে ডেমো সংস্করণ তৈরি করছি। 💻❤️
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Personal Message -->
+                <div class="max-w-4xl mx-auto">
+                    <div class="bg-gradient-to-br from-white/20 to-white/10 backdrop-blur-xl rounded-3xl p-12 border border-white/30 shadow-2xl">
+                        <div class="text-center mb-8">
+                            <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full mb-6 shadow-xl">
+                                <span class="text-4xl">💬</span>
+                            </div>
+                            <h4 class="text-3xl font-bold text-yellow-200 mb-6">আমি কী অনুভব করছি?</h4>
+                        </div>
+                        
+                        <p class="text-xl leading-relaxed mb-8 text-center text-blue-100">
+                            এই যাত্রাটা সহজ ছিল না। অসংখ্য রাতের পরিশ্রম, ব্যর্থতা, হতাশা, আবার নতুন করে শুরু করার সাহস — সবকিছু মিলেই আজকের এই অবস্থানে পৌঁছেছি। <span class="text-yellow-300 font-bold">আলহামদুলিল্লাহ!</span> 🌸
+                        </p>
+                        
+                        <div class="bg-gradient-to-r from-white/20 to-white/10 rounded-2xl p-8 border border-white/20">
+                            <div class="text-center mb-6">
+                                <div class="inline-flex items-center justify-center mb-4">
+                                    <span class="text-3xl mr-3 animate-pulse">🕊️</span>
+                                    <h5 class="text-2xl font-bold text-white">আমার একটাই অনুরোধ:</h5>
+                                </div>
+                            </div>
+                            <p class="text-lg text-center text-white/95 leading-relaxed">
+                                আমার জন্য দোয়া করবেন যেন আমি এই প্রজেক্টটিকে আরও বড় আকারে এগিয়ে নিতে পারি <span class="text-yellow-300 font-bold">ইনশাআল্লাহ</span> 🌙<br><br>
+                                আমি চাই বাংলাদেশসহ পুরো বিশ্বের মানুষের কাছে প্রযুক্তির সহজ ও মানবিক রূপ পৌঁছে দিতে।
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <h3 class="text-4xl font-bold text-gray-800 mb-12 text-center section-title">Skills & Expertise</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 border-2 border-blue-200 card-hover">
+                        <div class="flex items-center mb-4">
+                            <div class="text-3xl mr-4">👥</div>
+                            <h4 class="text-xl font-bold text-gray-800">Leadership & Team Coordination</h4>
+                        </div>
+                        <p class="text-gray-700">Leading diverse teams and coordinating complex projects across multiple organizations</p>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 border-2 border-purple-200 card-hover">
+                        <div class="flex items-center mb-4">
+                            <div class="text-3xl mr-4">📅</div>
+                            <h4 class="text-xl font-bold text-gray-800">Event Planning & Organization</h4>
+                        </div>
+                        <p class="text-gray-700">Organizing large-scale competitions, workshops, and educational campaigns</p>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-green-50 to-teal-50 rounded-xl p-6 border-2 border-green-200 card-hover">
+                        <div class="flex items-center mb-4">
+                            <div class="text-3xl mr-4">🎤</div>
+                            <h4 class="text-xl font-bold text-gray-800">Communication & Public Speaking</h4>
+                        </div>
+                        <p class="text-gray-700">Effective communication across diverse audiences and public speaking engagements</p>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-orange-50 to-red-50 rounded-xl p-6 border-2 border-orange-200 card-hover">
+                        <div class="flex items-center mb-4">
+                            <div class="text-3xl mr-4">🧠</div>
+                            <h4 class="text-xl font-bold text-gray-800">Problem-Solving & Analytical Thinking</h4>
+                        </div>
+                        <p class="text-gray-700">Strategic problem-solving and analytical approach to complex challenges</p>
+                    </div>
+                    
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements & Awards Section -->
+    <section class="py-20 bg-gradient-to-br from-yellow-50 to-orange-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-5xl mx-auto">
+                <h3 class="text-4xl font-bold text-gray-800 mb-12 text-center section-title">Achievements & Awards</h3>
+                <p class="text-lg text-gray-700 text-center mb-12 max-w-3xl mx-auto">
+                    আবীদ হাসানের একাডেমিক যাত্রায় রয়েছে অসংখ্য সাফল্যের গল্প। জাতীয় পর্যায়ের বিভিন্ন অলিম্পিয়াডে তার অসাধারণ পারফরম্যান্স তার মেধা ও পরিশ্রমের প্রমাণ।
+                </p>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-white rounded-xl p-6 shadow-lg card-hover border-t-4 border-blue-500">
+                        <div class="text-center mb-4">
+                            <div class="text-4xl mb-3">🏆</div>
+                            <div class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-bold inline-block mb-2">2023</div>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-2 text-center">Bangladesh Physics Olympiad</h4>
+                        <p class="text-blue-600 font-semibold text-center">Nationalist</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-6 shadow-lg card-hover border-t-4 border-purple-500">
+                        <div class="text-center mb-4">
+                            <div class="text-4xl mb-3">🥇</div>
+                            <div class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-bold inline-block mb-2">2024</div>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-2 text-center">Bangladesh Mathematical Olympiad</h4>
+                        <p class="text-purple-600 font-semibold text-center">Nationalist</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-6 shadow-lg card-hover border-t-4 border-green-500">
+                        <div class="text-center mb-4">
+                            <div class="text-4xl mb-3">🌟</div>
+                            <div class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-bold inline-block mb-2">2025</div>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-2 text-center">General Science Olympiad</h4>
+                        <p class="text-green-600 font-semibold text-center">Best CA</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-6 shadow-lg card-hover border-t-4 border-indigo-500">
+                        <div class="text-center mb-4">
+                            <div class="text-4xl mb-3">🌍</div>
+                            <div class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-bold inline-block mb-2">2024</div>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-2 text-center">National Earth Olympiad (NEO)</h4>
+                        <p class="text-indigo-600 font-semibold text-center">Finalist</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-6 shadow-lg card-hover border-t-4 border-pink-500">
+                        <div class="text-center mb-4">
+                            <div class="text-4xl mb-3">🌌</div>
+                            <div class="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm font-bold inline-block mb-2">2024</div>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-2 text-center">Bangladesh Olympiad on Astronomy and Astrophysics</h4>
+                        <p class="text-pink-600 font-semibold text-center">Finalist</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-6 shadow-lg card-hover border-t-4 border-teal-500">
+                        <div class="text-center mb-4">
+                            <div class="text-4xl mb-3">💰</div>
+                            <div class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm font-bold inline-block mb-2">2024</div>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-2 text-center">Bangladesh Economics Olympiad</h4>
+                        <p class="text-teal-600 font-semibold text-center">Finalist</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-6 shadow-lg card-hover border-t-4 border-orange-500">
+                        <div class="text-center mb-4">
+                            <div class="text-4xl mb-3">✍️</div>
+                            <div class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-bold inline-block mb-2">2025</div>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-2 text-center">High School Essay Contest 2025</h4>
+                        <p class="text-orange-600 font-semibold text-center">Participant</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-6 shadow-lg card-hover border-t-4 border-emerald-500">
+                        <div class="text-center mb-4">
+                            <div class="text-4xl mb-3">🌍</div>
+                            <div class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm font-bold inline-block mb-2">2025</div>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-2 text-center">Global Essay Prize</h4>
+                        <p class="text-emerald-600 font-semibold text-center">Participant</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-6 shadow-lg card-hover border-t-4 border-cyan-500">
+                        <div class="text-center mb-4">
+                            <div class="text-4xl mb-3">🏆</div>
+                            <div class="bg-cyan-100 text-cyan-800 px-3 py-1 rounded-full text-sm font-bold inline-block mb-2">2025</div>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-2 text-center">Future Port Awards 2025</h4>
+                        <p class="text-cyan-600 font-semibold text-center">Participant</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-6 shadow-lg card-hover border-t-4 border-red-500">
+                        <div class="text-center mb-4">
+                            <div class="text-4xl mb-3">🌍</div>
+                            <div class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-bold inline-block mb-2">2024</div>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-2 text-center">Global Math Olympiad (GMO)</h4>
+                        <p class="text-red-600 font-semibold text-center">Participant</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-6 shadow-lg card-hover border-t-4 border-violet-500">
+                        <div class="text-center mb-4">
+                            <div class="text-4xl mb-3">💻</div>
+                            <div class="bg-violet-100 text-violet-800 px-3 py-1 rounded-full text-sm font-bold inline-block mb-2">2025</div>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-2 text-center">ICT Olympiad Bangladesh</h4>
+                        <p class="text-violet-600 font-semibold text-center">Best CA</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-6 shadow-lg card-hover border-t-4 border-sky-500">
+                        <div class="text-center mb-4">
+                            <div class="text-4xl mb-3">🇺🇳</div>
+                            <div class="bg-sky-100 text-sky-800 px-3 py-1 rounded-full text-sm font-bold inline-block mb-2">2025</div>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-2 text-center">Solve Global Problems to Present in the UN</h4>
+                        <p class="text-sky-600 font-semibold text-center">Participant</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-6 shadow-lg card-hover border-t-4 border-rose-500">
+                        <div class="text-center mb-4">
+                            <div class="text-4xl mb-3">🔬</div>
+                            <div class="bg-rose-100 text-rose-800 px-3 py-1 rounded-full text-sm font-bold inline-block mb-2">2024</div>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-2 text-center">International Research Olympiad</h4>
+                        <p class="text-rose-600 font-semibold text-center">Participant</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-6 shadow-lg card-hover border-t-4 border-lime-500">
+                        <div class="text-center mb-4">
+                            <div class="text-4xl mb-3">🧪</div>
+                            <div class="bg-lime-100 text-lime-800 px-3 py-1 rounded-full text-sm font-bold inline-block mb-2">2025</div>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-2 text-center">STEM Olympiad</h4>
+                        <p class="text-lime-600 font-semibold text-center">Participant</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-6 shadow-lg card-hover border-t-4 border-amber-500">
+                        <div class="text-center mb-4">
+                            <div class="text-4xl mb-3">🧮</div>
+                            <div class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-bold inline-block mb-2">2024</div>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-2 text-center">International Youth Math Challenge</h4>
+                        <p class="text-amber-600 font-semibold text-center">Participant</p>
+                    </div>
+                </div>
+                
+                <div class="mt-12 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-2xl p-8 text-white text-center">
+                    <div class="text-4xl mb-4">🎯</div>
+                    <h4 class="text-2xl font-bold mb-4">Academic Excellence</h4>
+                    <p class="text-lg opacity-95 max-w-2xl mx-auto">
+                        এই সকল অর্জন আবীদের একাডেমিক দক্ষতা এবং বিজ্ঞানের প্রতি গভীর ভালোবাসার প্রমাণ। প্রতিটি অলিম্পিয়াডে তার সাফল্য দেশের গর্ব এবং তরুণদের জন্য অনুপ্রেরণা।
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Works & Leadership Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h3 class="text-4xl font-bold text-gray-800 mb-12 text-center section-title">Works & Leadership</h3>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="bg-white rounded-xl shadow-lg p-8 card-hover border-t-4 border-purple-600">
+                    <h4 class="text-2xl font-bold text-gray-800 mb-2">EduHarbor</h4>
+                    <p class="text-purple-600 font-semibold mb-4">Managing Director & Lead Organizer</p>
+                    <p class="text-gray-600">Youth-focused educational platform organizing competitions, workshops, and campaigns</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-8 card-hover border-t-4 border-indigo-600">
+                    <h4 class="text-2xl font-bold text-gray-800 mb-2">Unbounded Community</h4>
+                    <p class="text-indigo-600 font-semibold mb-4">Chief Operating Officer (COO)</p>
+                    <p class="text-gray-600">Bringing youth together for social welfare and community development</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-8 card-hover border-t-4 border-blue-600">
+                    <h4 class="text-2xl font-bold text-gray-800 mb-2">Muzora</h4>
+                    <p class="text-blue-600 font-semibold mb-4">Program Planner & COO</p>
+                    <p class="text-gray-600">Next-generation organization fostering creativity, leadership, and innovation</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-8 card-hover border-t-4 border-pink-600">
+                    <h4 class="text-2xl font-bold text-gray-800 mb-2">AF Foundation</h4>
+                    <p class="text-pink-600 font-semibold mb-4">Humanitarian Coordinator</p>
+                    <p class="text-gray-600">Supporting underprivileged and marginalized communities</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-8 card-hover border-t-4 border-red-600">
+                    <h4 class="text-2xl font-bold text-gray-800 mb-2">AF Fashion & Food</h4>
+                    <p class="text-red-600 font-semibold mb-4">Social Responsibility Lead</p>
+                    <p class="text-gray-600">Creative initiative promoting social responsibility among young entrepreneurs</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-8 card-hover border-t-4 border-orange-600">
+                    <h4 class="text-2xl font-bold text-gray-800 mb-2">Safentix</h4>
+                    <p class="text-orange-600 font-semibold mb-4">CTO & Speaker</p>
+                    <p class="text-gray-600">শিক্ষার্থীদের নিরাপত্তা সচেতনতা বৃদ্ধি করা, অনলাইন ও অফলাইন উভয় পরিবেশে সতর্কতা শেখানো</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-8 card-hover border-t-4 border-teal-600">
+                    <h4 class="text-2xl font-bold text-gray-800 mb-2">EurekaSphere</h4>
+                    <p class="text-teal-600 font-semibold mb-4">Writer</p>
+                    <p class="text-gray-600">Contributing innovative content and research-based articles for knowledge sharing</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-8 card-hover border-t-4 border-cyan-600">
+                    <h4 class="text-2xl font-bold text-gray-800 mb-2">EduHarbor News</h4>
+                    <p class="text-cyan-600 font-semibold mb-4">Executive Member</p>
+                    <p class="text-gray-600">Managing editorial content and strategic communications for educational news platform</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <h3 class="text-4xl font-bold text-gray-800 mb-8 section-title">Research & Reports</h3>
+                <p class="text-lg text-gray-700 leading-relaxed mb-8">
+                    গবেষণা আবীদের অন্যতম প্রিয় ক্ষেত্র। তিনি এখন পর্যন্ত ১৫টিরও বেশি গবেষণা রিপোর্ট তৈরি করেছেন, যেগুলোর বিষয়বস্তু বৈচিত্র্যময়:
+                </p>
+                <div class="space-y-4">
+                    <div class="bg-white rounded-lg p-6 shadow-md border-l-4 border-green-500">
+                        <p class="text-lg text-gray-700">🌎 Environmental Conservation & Climate Change Impact</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-6 shadow-md border-l-4 border-blue-500">
+                        <p class="text-lg text-gray-700">♻️ Plastic Usage Awareness Among Students</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-6 shadow-md border-l-4 border-purple-500">
+                        <p class="text-lg text-gray-700">💻 Online Education: Benefits & Limitations</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-6 shadow-md border-l-4 border-pink-500">
+                        <p class="text-lg text-gray-700">❤️ Social Impact of Humanity & Youth Role</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-6 shadow-md border-l-4 border-red-500">
+                        <p class="text-lg text-gray-700">🕊️ Youth Responsibility in Palestine Issue</p>
+                    </div>
+                </div>
+                <div class="bg-purple-50 border-l-4 border-purple-600 p-6 rounded-r-lg mt-8">
+                    <p class="text-lg italic text-gray-700">
                         "জ্ঞানকে কাজে লাগিয়ে মানবতার জন্য বাস্তব সমাধান খোঁজা।"
                     </p>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <!-- Projects -->
-                <div>
-                    <h3 class="text-2xl md:text-3xl font-bold mb-6 text-emerald-800 flex items-center bengali-text">
-                        <svg class="w-8 h-8 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                        </svg>
-                        Projects & Campaigns
-                    </h3>
-                    <div class="space-y-4">
-                        <div class="bg-emerald-50 rounded-lg p-4 border-l-4 border-emerald-500">
-                            <h4 class="font-bold text-emerald-800 mb-2 bengali-text">🔬 SciVenture Olympiad 2025</h4>
-                            <p class="text-gray-700 bengali-text">Massive science competition engaging students nationwide in knowledge, science, and creativity</p>
-                        </div>
-                        <div class="bg-emerald-50 rounded-lg p-4 border-l-4 border-emerald-500">
-                            <h4 class="font-bold text-emerald-800 mb-2 bengali-text">🧠 The Brain Battle 1.0</h4>
-                            <p class="text-gray-700 bengali-text">Intellectual competition sparking curiosity and learning enthusiasm among youth</p>
-                        </div>
-                        <div class="bg-emerald-50 rounded-lg p-4 border-l-4 border-emerald-500">
-                            <h4 class="font-bold text-emerald-800 mb-2 bengali-text">📘 English Challenge 2025</h4>
-                            <p class="text-gray-700 bengali-text">Competition enhancing English proficiency and boosting confidence among young participants</p>
-                        </div>
-                        <div class="bg-emerald-50 rounded-lg p-4 border-l-4 border-emerald-500">
-                            <h4 class="font-bold text-emerald-800 mb-2 bengali-text">🌿 Green Awareness Campaign</h4>
-                            <p class="text-gray-700 bengali-text">Environmental awareness campaign promoting sustainable lifestyles among youth</p>
-                        </div>
-                        <div class="bg-emerald-50 rounded-lg p-4 border-l-4 border-emerald-500">
-                            <h4 class="font-bold text-emerald-800 mb-2 bengali-text">🕊️ Stand for Palestine Initiative</h4>
-                            <p class="text-gray-700 bengali-text">Humanitarian campaign standing with Palestinian children and innocent civilians</p>
-                        </div>
-                    </div>
+    <!-- Projects & Campaigns Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h3 class="text-4xl font-bold text-gray-800 mb-12 text-center section-title">Projects & Campaigns</h3>
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <div class="bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl p-8 text-white card-hover">
+                    <div class="text-4xl mb-4">🔬</div>
+                    <h4 class="text-2xl font-bold mb-3">SciVenture Olympiad 2025</h4>
+                    <p class="opacity-90">Massive science competition engaging students nationwide in knowledge, science, and creativity</p>
+                </div>
+                <div class="bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl p-8 text-white card-hover">
+                    <div class="text-4xl mb-4">🧠</div>
+                    <h4 class="text-2xl font-bold mb-3">The Brain Battle 1.0</h4>
+                    <p class="opacity-90">Intellectual competition sparking curiosity and learning enthusiasm among youth</p>
+                </div>
+                <div class="bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-xl p-8 text-white card-hover">
+                    <div class="text-4xl mb-4">📘</div>
+                    <h4 class="text-2xl font-bold mb-3">English Challenge 2025</h4>
+                    <p class="opacity-90">Competition enhancing English proficiency and boosting confidence among young participants</p>
+                </div>
+                <div class="bg-gradient-to-br from-green-500 to-green-600 rounded-xl p-8 text-white card-hover">
+                    <div class="text-4xl mb-4">🌿</div>
+                    <h4 class="text-2xl font-bold mb-3">Green Awareness Campaign</h4>
+                    <p class="opacity-90">Environmental awareness campaign promoting sustainable lifestyles among youth</p>
+                </div>
+                <div class="bg-gradient-to-br from-red-500 to-red-600 rounded-xl p-8 text-white card-hover md:col-span-2">
+                    <div class="text-4xl mb-4">🕊️</div>
+                    <h4 class="text-2xl font-bold mb-3">Stand for Palestine Initiative</h4>
+                    <p class="opacity-90">Humanitarian campaign standing with Palestinian children and innocent civilians</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Philosophy & Future -->
-    <section class="py-16 px-4">
-        <div class="max-w-6xl mx-auto">
-            <div class="grid md:grid-cols-2 gap-12">
-                <!-- Philosophy -->
-                <div class="bg-white rounded-2xl shadow-lg p-8">
-                    <h3 class="text-2xl md:text-3xl font-bold mb-6 text-emerald-800 flex items-center bengali-text">
-                        <svg class="w-8 h-8 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
-                        </svg>
-                        Inspiration & Philosophy
-                    </h3>
-                    <blockquote class="text-xl italic text-emerald-700 mb-6 bg-emerald-50 p-6 rounded-lg bengali-text">
+    <!-- Inspiration Section -->
+    <section class="py-20 bg-gradient-to-br from-indigo-600 to-purple-700 text-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h3 class="text-4xl font-bold mb-8">Inspiration & Philosophy</h3>
+                <div class="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-10 mb-8">
+                    <p class="text-2xl italic mb-6">
                         "মানুষকে ভালোবাসা মানেই নিজেকে বদলে ফেলা। সমাজকে বদলাতে চাইলে প্রথমে নিজেকে মানবিক হতে হবে।"
-                    </blockquote>
-                    <div class="text-center py-4">
-                        <div class="text-2xl font-bold text-emerald-800 bengali-text">"Learn, Serve, Inspire."</div>
-                        <p class="text-gray-700 mt-2 bengali-text">শিখো, সেবা করো, এবং অন্যদের অনুপ্রাণিত করো। 🌿</p>
-                    </div>
-                </div>
-
-                <!-- Future Plans -->
-                <div class="bg-white rounded-2xl shadow-lg p-8">
-                    <h3 class="text-2xl md:text-3xl font-bold mb-6 text-emerald-800 flex items-center bengali-text">
-                        <svg class="w-8 h-8 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                        </svg>
-                        Future Plans
-                    </h3>
-                    <p class="text-gray-700 mb-6 bengali-text">
-                        ভবিষ্যতে আবীদ হাসানের লক্ষ্য আরও বিস্তৃত ও বৈশ্বিক। তিনি চান এমন এক সমাজ গড়ে তুলতে, যেখানে শিক্ষা, সহানুভূতি ও সহযোগিতা মিলেমিশে থাকবে।
                     </p>
-                    <ul class="space-y-3">
-                        <li class="text-gray-700 flex items-start bengali-text">
-                            <span class="w-2 h-2 bg-emerald-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                            Establish an international humanitarian organization 🌐
-                        </li>
-                        <li class="text-gray-700 flex items-start bengali-text">
-                            <span class="w-2 h-2 bg-emerald-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                            Create a free online learning platform for youth 🎓
-                        </li>
-                        <li class="text-gray-700 flex items-start bengali-text">
-                            <span class="w-2 h-2 bg-emerald-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                            Drive positive social change through scientific research 🔬
-                        </li>
-                        <li class="text-gray-700 flex items-start bengali-text">
-                            <span class="w-2 h-2 bg-emerald-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                            Build support networks for children in Palestine and oppressed regions 🕊️
-                        </li>
-                    </ul>
+                </div>
+                <div class="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-10">
+                    <p class="text-3xl font-bold mb-4">"Learn, Serve, Inspire."</p>
+                    <p class="text-xl">শিখো, সেবা করো, এবং অন্যদের অনুপ্রাণিত করো। 🌿</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Conclusion -->
-    <section class="py-16 px-4 bg-gradient-to-r from-emerald-600 to-teal-700 text-white">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-8 bengali-text">💚 Conclusion</h2>
-            <p class="text-xl mb-8 leading-relaxed bengali-text">
-                আবীদ হাসান সেইসব তরুণদের একজন, যাদের স্বপ্ন কেবল নিজের জন্য নয় সবার জন্য। তিনি জানেন, পরিবর্তন এক দিনে আসে না, কিন্তু প্রতিটি সৎ পদক্ষেপই পরিবর্তনের সূচনা করে।
-            </p>
-            <blockquote class="text-2xl italic mb-8 bengali-text">
-                "যদি আমরা সবাই একটু একটু করে মানবতার আলো জ্বালাই, তবে একদিন অন্ধকার নিজে থেকেই হারিয়ে যাবে।" 🌟
-            </blockquote>
-            <div class="flex flex-col md:flex-row items-center justify-center gap-6 mb-8">
-                <a href="https://www.facebook.com/abidhasanef/" target="_blank" rel="noopener noreferrer" class="bg-white text-emerald-700 px-6 py-3 rounded-full font-semibold hover:bg-emerald-50 transition-colors flex items-center">
-                    <i class="fab fa-facebook-f mr-2"></i>
-                    Facebook
-                </a>
-                <a href="https://instagram.com/abidhasanef" target="_blank" rel="noopener noreferrer" class="bg-white text-emerald-700 px-6 py-3 rounded-full font-semibold hover:bg-emerald-50 transition-colors flex items-center">
-                    <i class="fab fa-instagram mr-2"></i>
-                    Instagram
-                </a>
-                <a href="https://github.com/abidhasanef" target="_blank" rel="noopener noreferrer" class="bg-white text-emerald-700 px-6 py-3 rounded-full font-semibold hover:bg-emerald-50 transition-colors flex items-center">
-                    <i class="fab fa-github mr-2"></i>
-                    GitHub
-                </a>
+    <!-- Future Plans Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <h3 class="text-4xl font-bold text-gray-800 mb-8 section-title">Future Plans</h3>
+                <p class="text-lg text-gray-700 leading-relaxed mb-10">
+                    ভবিষ্যতে আবীদ হাসানের লক্ষ্য আরও বিস্তৃত ও বৈশ্বিক। তিনি চান এমন এক সমাজ গড়ে তুলতে, যেখানে শিক্ষা, সহানুভূতি ও সহযোগিতা মিলেমিশে থাকবে।
+                </p>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-8 border-2 border-blue-200">
+                        <div class="text-4xl mb-4">🌐</div>
+                        <p class="text-lg text-gray-700 font-semibold">Establish an international humanitarian organization</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-8 border-2 border-purple-200">
+                        <div class="text-4xl mb-4">🎓</div>
+                        <p class="text-lg text-gray-700 font-semibold">Create a free online learning platform for youth</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-green-50 to-teal-50 rounded-xl p-8 border-2 border-green-200">
+                        <div class="text-4xl mb-4">🔬</div>
+                        <p class="text-lg text-gray-700 font-semibold">Drive positive social change through scientific research</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-red-50 to-orange-50 rounded-xl p-8 border-2 border-red-200">
+                        <div class="text-4xl mb-4">🕊️</div>
+                        <p class="text-lg text-gray-700 font-semibold">Build support networks for children in Palestine and oppressed regions</p>
+                    </div>
+                </div>
             </div>
-            <p class="text-emerald-100 bengali-text">Made with ❤️ for Gaza | © 2025 Abid Hasan</p>
-            <p class="text-emerald-100 mt-2 font-semibold bengali-text">From the river to the sea, Palestine will be free</p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12 px-4">
-        <div class="max-w-6xl mx-auto">
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="lg:col-span-2">
-                    <h3 class="text-2xl font-bold mb-4 bengali-text">আবীদ হাসান</h3>
-                    <p class="text-gray-300 mb-4 bengali-text">
-                        মানবতার আলোর পথে এক তরুণ যাত্রা শিক্ষার্থী, মানবসেবক, গবেষক ও উদ্যমী সংগঠক।
-                    </p>
-                    <div class="flex space-x-4">
-                        <a href="https://www.facebook.com/abidhasanef/" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white transition-colors">
-                            <i class="fab fa-facebook-f text-xl"></i>
-                        </a>
-                        <a href="https://instagram.com/abidhasanef" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white transition-colors">
-                            <i class="fab fa-instagram text-xl"></i>
-                        </a>
-                        <a href="https://github.com/abidhasanef" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white transition-colors">
-                            <i class="fab fa-github text-xl"></i>
-                        </a>
+    <footer class="relative py-20 overflow-hidden">
+        <!-- Animated Footer Background -->
+        <div class="absolute inset-0 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+            <div class="absolute top-0 left-0 w-full h-full">
+                <div class="absolute top-10 left-10 w-40 h-40 bg-blue-400/10 rounded-full blur-2xl animate-pulse"></div>
+                <div class="absolute top-20 right-20 w-32 h-32 bg-purple-400/10 rounded-full blur-2xl animate-pulse" style="animation-delay: 1s;"></div>
+                <div class="absolute bottom-20 left-1/4 w-36 h-36 bg-pink-400/10 rounded-full blur-2xl animate-pulse" style="animation-delay: 2s;"></div>
+                <div class="absolute bottom-10 right-1/3 w-28 h-28 bg-indigo-400/10 rounded-full blur-2xl animate-pulse" style="animation-delay: 3s;"></div>
+            </div>
+        </div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-6xl mx-auto">
+                <!-- Main Footer Content -->
+                <div class="grid md:grid-cols-3 gap-12 mb-16">
+                    <!-- Profile Section -->
+                    <div class="text-center md:text-left">
+                        <div class="relative inline-block mb-6">
+                            <div class="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full blur-lg opacity-50 animate-pulse"></div>
+                            <div class="relative w-24 h-24 rounded-full overflow-hidden border-4 border-white/20 shadow-2xl">
+                                <img src="https://github.com/nasrinaktheref/abidhasan/raw/9b8586cccc9f304e9ea671b964640e1240704da4/canvas.png" 
+                                     alt="আবীদ হাসান - Profile Picture" 
+                                     class="w-full h-full object-cover"
+                                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center backdrop-blur-lg" style="display: none;">
+                                    <span class="text-4xl">👨‍💻</span>
+                                </div>
+                            </div>
+                        </div>
+                        <h4 class="text-3xl font-bold text-white mb-4 bg-gradient-to-r from-blue-200 to-purple-200 bg-clip-text text-transparent">আবীদ হাসান</h4>
+                        <p class="text-xl text-blue-200 mb-6 opacity-90">মানবতার আলোর পথে এক তরুণ যাত্রা</p>
+                        <div class="w-20 h-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full mx-auto md:mx-0"></div>
+                    </div>
+                    
+                    <!-- Quick Links -->
+                    <div class="text-center">
+                        <h5 class="text-2xl font-bold text-white mb-6">Quick Links</h5>
+                        <div class="space-y-4">
+                            <div class="bg-white/10 backdrop-blur-lg rounded-xl p-4 border border-white/20 hover:bg-white/20 transition-all duration-300 cursor-pointer">
+                                <span class="text-lg text-white">📚 Published Books</span>
+                            </div>
+                            <div class="bg-white/10 backdrop-blur-lg rounded-xl p-4 border border-white/20 hover:bg-white/20 transition-all duration-300 cursor-pointer">
+                                <span class="text-lg text-white">🏆 Achievements</span>
+                            </div>
+                            <a href="https://ai.eduharbor.top/abidai/" target="_blank" rel="noopener noreferrer" class="bg-white/10 backdrop-blur-lg rounded-xl p-4 border border-white/20 hover:bg-white/20 transition-all duration-300 cursor-pointer block">
+                                <span class="text-lg text-white">🤖 Abid's AI</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact & Social -->
+                    <div class="text-center">
+                        <h5 class="text-2xl font-bold text-white mb-6">Connect With Me</h5>
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            <a href="https://www.facebook.com/abidhasanef" target="_blank" rel="noopener noreferrer" class="group bg-white/10 backdrop-blur-lg rounded-xl p-4 border border-white/20 hover:bg-blue-500/30 transition-all duration-300 hover:scale-105">
+                                <svg class="w-8 h-8 mx-auto mb-2 text-white group-hover:text-blue-200" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                                <span class="text-sm text-white">Facebook</span>
+                            </a>
+                            
+                            <a href="https://instagram.com/abidhasanef" target="_blank" rel="noopener noreferrer" class="group bg-white/10 backdrop-blur-lg rounded-xl p-4 border border-white/20 hover:bg-pink-500/30 transition-all duration-300 hover:scale-105">
+                                <svg class="w-8 h-8 mx-auto mb-2 text-white group-hover:text-pink-200" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                                <span class="text-sm text-white">Instagram</span>
+                            </a>
+                            
+                            <a href="https://www.threads.com/@abidhasanef" target="_blank" rel="noopener noreferrer" class="group bg-white/10 backdrop-blur-lg rounded-xl p-4 border border-white/20 hover:bg-purple-500/30 transition-all duration-300 hover:scale-105">
+                                <svg class="w-8 h-8 mx-auto mb-2 text-white group-hover:text-purple-200" fill="currentColor" viewBox="0 0 24 24"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.5 12.01c0-3.339.645-6.4 1.915-9.092C4.69 0.615 6.956-.207 9.817-.207c1.856 0 3.582.515 5.13 1.531 1.548 1.016 2.709 2.456 3.451 4.281.742 1.825 1.122 3.83 1.122 5.955 0 2.207-.4 4.299-1.122 6.063-.722 1.764-1.883 3.203-3.451 4.219C14.399 23.485 12.673 24 10.817 24h1.369zm.014-2.21c1.32 0 2.5-.363 3.504-1.08 1.004-.717 1.78-1.712 2.31-2.952.53-1.24.798-2.596.798-4.03 0-1.495-.268-2.85-.798-4.03-.53-1.18-1.306-2.115-2.31-2.832-1.004-.717-2.184-1.08-3.504-1.08-1.32 0-2.5.363-3.504 1.08-1.004.717-1.78 1.652-2.31 2.832-.53 1.18-.798 2.535-.798 4.03 0 1.434.268 2.79.798 4.03.53 1.24 1.306 2.235 2.31 2.952 1.004.717 2.184 1.08 3.504 1.08z"/></svg>
+                                <span class="text-sm text-white">Threads</span>
+                            </a>
+                            
+                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="group bg-white/10 backdrop-blur-lg rounded-xl p-4 border border-white/20 hover:bg-gray-500/30 transition-all duration-300 hover:scale-105">
+                                <svg class="w-8 h-8 mx-auto mb-2 text-white group-hover:text-gray-200" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                <span class="text-sm text-white">GitHub</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 
-                <div>
-                    <h4 class="text-lg font-semibold mb-4 bengali-text">Quick Links</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#about" class="text-gray-300 hover:text-white transition-colors bengali-text">About</a></li>
-                        <li><a href="#education" class="text-gray-300 hover:text-white transition-colors bengali-text">Education</a></li>
-                        <li><a href="#organizations" class="text-gray-300 hover:text-white transition-colors bengali-text">Organizations</a></li>
-                        <li><a href="#projects" class="text-gray-300 hover:text-white transition-colors bengali-text">Projects</a></li>
-                    </ul>
+                <!-- Inspirational Quote -->
+                <div class="text-center mb-12">
+                    <div class="bg-white/10 backdrop-blur-xl rounded-3xl p-10 border border-white/20 shadow-2xl max-w-4xl mx-auto">
+                        <div class="text-6xl mb-6 animate-pulse">✨</div>
+                        <blockquote class="text-2xl italic text-white leading-relaxed mb-6">
+                            "জ্ঞানের আলো আর মানবতার উষ্ণতা একসাথে থাকলেই গড়ে উঠবে সুন্দর পৃথিবী।"
+                        </blockquote>
+                        <div class="flex justify-center">
+                            <div class="w-24 h-1 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 rounded-full animate-pulse"></div>
+                        </div>
+                    </div>
                 </div>
                 
-                <div>
-                    <h4 class="text-lg font-semibold mb-4 bengali-text">More Articles</h4>
-                    <ul class="space-y-2">
-                        <li>
-                            <a href="" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white transition-colors text-sm bengali-text">
-                                About Abid Hasan (Detailed)
-                            </a>
-                        </li>
-                        <li>
-                            <a href="" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white transition-colors text-sm bengali-text">
-                                GitHub Repository
-                            </a>
-                        </li>
-                        <li>
-                            <a href="" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white transition-colors text-sm bengali-text">
-                                View All Projects
-                            </a>
-                        </li>
-                    </ul>
+                <!-- Bottom Footer -->
+                <div class="border-t border-white/20 pt-8">
+                    <div class="flex flex-col md:flex-row justify-between items-center">
+                        <div class="text-white/80 mb-4 md:mb-0">
+                            <p class="text-lg">© 2025 Abid Hasan. All rights reserved.</p>
+                        </div>
+                        <div class="flex items-center space-x-6 text-white/60">
+                            <span class="flex items-center">
+                                <span class="text-red-400 mr-2 animate-pulse">❤️</span>
+                                Made with love for humanity
+                            </span>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
-                <p class="text-gray-400 bengali-text">Made with ❤️ for Gaza | © 2025 Abid Hasan</p>
-                <p class="text-gray-400 text-sm mt-2 bengali-text">From the river to the sea, Palestine will be free</p>
             </div>
         </div>
     </footer>
-</body>
+
+    <script>
+        // Scroll reveal animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                }
+            });
+        }, observerOptions);
+
+        // Add scroll reveal to sections
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.classList.add('scroll-reveal');
+                observer.observe(section);
+            });
+
+            // Add stagger effect to cards
+            const cards = document.querySelectorAll('.card-hover');
+            cards.forEach((card, index) => {
+                card.style.animationDelay = `${index * 0.1}s`;
+            });
+
+            // Smooth scrolling for navigation
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Add parallax effect to floating shapes
+            window.addEventListener('scroll', () => {
+                const scrolled = window.pageYOffset;
+                const shapes = document.querySelector('.floating-shapes');
+                if (shapes) {
+                    shapes.style.transform = `translateY(${scrolled * 0.5}px)`;
+                }
+            });
+
+            // Add typing effect to main title
+            const title = document.querySelector('h2');
+            if (title) {
+                const text = title.textContent;
+                title.textContent = '';
+                title.style.borderRight = '2px solid white';
+                
+                let i = 0;
+                const typeWriter = () => {
+                    if (i < text.length) {
+                        title.textContent += text.charAt(i);
+                        i++;
+                        setTimeout(typeWriter, 100);
+                    } else {
+                        setTimeout(() => {
+                            title.style.borderRight = 'none';
+                        }, 1000);
+                    }
+                };
+                
+                setTimeout(typeWriter, 1000);
+            }
+        });
+
+        // Add mouse move effect for cards
+        document.querySelectorAll('.card-hover').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                const rotateX = (y - centerY) / 10;
+                const rotateY = (centerX - x) / 10;
+                
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-12px) scale(1.02)`;
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = '';
+            });
+        });
+
+        // Create floating particles
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 50;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 8 + 's';
+                particle.style.animationDuration = (Math.random() * 3 + 5) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+        
+        // Initialize particles
+        createParticles();
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'99421b6126643378',t:'MTc2MTM5OTQyOS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
